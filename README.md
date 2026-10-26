@@ -65,7 +65,7 @@ python data/export_images.py \
 
 This saves the images and generates updated CSV files containing image paths.
 
-Image export can take several hours. Run it in a CARC compute allocation with sufficient wall time.
+Run it in a CARC compute allocation with sufficient time. On CPUs only, this took me about 6 hours.
 
 ### 7. Final dataset location
 
