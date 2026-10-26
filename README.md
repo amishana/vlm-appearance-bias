@@ -11,7 +11,6 @@ We use [SocialCounterfactuals](https://huggingface.co/datasets/Intel/SocialCount
 ```bash
 git clone git@github.com:amishana/vlm-appearance-bias.git
 cd vlm-appearance-bias
-git switch baseline
 ```
 
 ### 2. Set up the environment
