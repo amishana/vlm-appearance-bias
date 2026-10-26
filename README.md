@@ -92,7 +92,7 @@ Use the CSV files inside `exported/` for experiments after image export complete
 **Note:** Large datasets and model weights stay on CARC scratch2, not GitHub. The dataset scripts should be run on a CARC compute node.
 
 
-### Note on file paths
+### IMPORTANT NOTE ON FILE PATHS
 
 `data/inspect_dataset.py` and `data/validate_occupations.py`
 currently have `/scratch2/amishana/` as their default output path.
