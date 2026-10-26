@@ -10,6 +10,7 @@ from validate_occupations import extract_occupation
 
 
 DATASET_NAME = "Intel/SocialCounterfactuals"
+DATASET_REVISION = "182f8d1739028dc3ab9e9f6be4e1cb52cf5d6fe1"
 
 COLUMNS = [
     "dataset_segment",
@@ -36,7 +37,7 @@ OUTPUT_COLUMNS = [
 ]
 
 
-def preprocess(output_dir, limit=None):
+def preprocess(output_dir, limit=None, revision=DATASET_REVISION):
     output_dir.mkdir(parents=True, exist_ok=True)
 
     metadata_path = output_dir / "metadata.csv"
@@ -48,6 +49,7 @@ def preprocess(output_dir, limit=None):
         DATASET_NAME,
         split="train",
         streaming=True,
+        revision=revision,
     ).select_columns(COLUMNS)
 
     total = 0
@@ -114,6 +116,7 @@ def preprocess(output_dir, limit=None):
 
     report = {
         "dataset": DATASET_NAME,
+        "revision": revision,
         "total_rows": total,
         "failed_extractions": failed,
         "unique_occupations": len(occupations),
@@ -160,12 +163,18 @@ def main():
         help="Optional row limit for testing.",
     )
 
+    parser.add_argument(
+        "--revision",
+        default=DATASET_REVISION,
+        help="Hugging Face dataset revision.",
+    )
+
     args = parser.parse_args()
 
     if args.limit is not None and args.limit <= 0:
         parser.error("--limit must be a positive integer")
 
-    preprocess(args.output, args.limit)
+    preprocess(args.output, args.limit, args.revision)
 
 
 if __name__ == "__main__":
