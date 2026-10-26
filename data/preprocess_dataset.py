@@ -6,10 +6,7 @@ from pathlib import Path
 
 from datasets import load_dataset
 
-try:
-    from baseline.validate_occupations import extract_occupation
-except ModuleNotFoundError:
-    from validate_occupations import extract_occupation
+from validate_occupations import extract_occupation
 
 
 DATASET_NAME = "Intel/SocialCounterfactuals"
