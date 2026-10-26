@@ -4,14 +4,20 @@ CSCI 566 group project studying how race, gender, and physical characteristics a
 
 ## Dataset Setup (USC CARC)
 
-We use [SocialCounterfactuals](https://huggingface.co/datasets/Intel/SocialCounterfactuals), containing 170,832 images across 13,824 counterfactual groups.
+Go to USC CARC OnDemand and select JupyterLab from the left sidebar. 
+```https://ondemand.carc.usc.edu/pun/sys/dashboard/batch_connect/sessions```
+Fill out the required information to request a CARC allocation. All steps in this README can be completed using CPUs, so a GPU allocation is not necessary. CPU allocations have near-zero queue times.
+
+I recommend requesting a 12-hour allocation and completing the setup in one session, since exporting all the images takes approximately 6 hours.
+Read through the entire README before starting, especially the important note about file paths at the bottom.
+
+Note: You must be connected to USC Wi-Fi (in person or through the VPN) to access CARC.
 
 ### 1. Clone the repository
 
 ```bash
 git clone git@github.com:amishana/vlm-appearance-bias.git
 cd vlm-appearance-bias
-git switch baseline
 ```
 
 ### 2. Set up the environment
@@ -37,7 +43,8 @@ The scripts load SocialCounterfactuals from Hugging Face automatically.
 
 ```bash
 python data/preprocess_dataset.py \
-  --output "$DATA_ROOT/processed/socialcounterfactuals"
+  --output "$DATA_ROOT/processed/socialcounterfactuals" \
+  --revision 182f8d1739028dc3ab9e9f6be4e1cb52cf5d6fe1
 ```
 
 This creates `metadata.csv` with occupation labels, captions, demographic attributes, and counterfactual group IDs.
@@ -65,7 +72,7 @@ python data/export_images.py \
 
 This saves the images and generates updated CSV files containing image paths.
 
-Image export can take several hours. Run it in a CARC compute allocation with sufficient wall time.
+Run it in a CARC compute allocation with sufficient time. On CPUs only, this took me about 6 hours.
 
 ### 7. Final dataset location
 
@@ -90,3 +97,13 @@ Image export can take several hours. Run it in a CARC compute allocation with su
 Use the CSV files inside `exported/` for experiments after image export completes. Image paths are relative to the `exported/` directory.
 
 **Note:** Large datasets and model weights stay on CARC scratch2, not GitHub. The dataset scripts should be run on a CARC compute node.
+
+
+### IMPORTANT NOTE ON FILE PATHS
+
+`data/inspect_dataset.py` and `data/validate_occupations.py`
+currently have `/scratch2/amishana/` as their default output path.
+If running either script, pass `--output` with your own scratch2 path.
+
+The main preprocessing, splitting, and image export commands above
+already use `$DATA_ROOT`, so no path changes are needed.
