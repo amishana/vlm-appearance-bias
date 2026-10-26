@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Environment variables
+.env
+.env.*
+
+# Datasets
+data/raw/
+data/processed/
+*.parquet
+*.arrow
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Generated outputs
+outputs/
+logs/
+
+# System files
+.DS_Store
