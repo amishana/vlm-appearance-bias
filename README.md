@@ -1,7 +1,8 @@
-# vlm-appearance-bias
 # VLM Appearance Bias
-
 CSCI 566 group project studying how race, gender, and physical characteristics affect VLM occupation predictions.
+
+## Before starting
+You must have memory and CPUs/GPUs allocated on USC's CARC service. In a browser, visit ondemand.carc.usc.edu/pun/sys/dashboard/batch_connect/sessions and click "JupyterLab" on the left tab. Fill out the information as needed, and wait to be allocated resources. 48GB of memory should be sufficient. You must be on USC Wi-Fi to visit this website. 
 
 ## 1. Clone the repo
 
