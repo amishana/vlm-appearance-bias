@@ -107,3 +107,10 @@ If running either script, pass `--output` with your own scratch2 path.
 
 The main preprocessing, splitting, and image export commands above
 already use `$DATA_ROOT`, so no path changes are needed.
+
+### Chosen Models
+The models chosen for comparison in this experiment are as follows: 
+  SmolVLM2-2.2B-Instruct
+  Qwen2.5-VL-3B
+  InternVL3-8B
+Download them onto your CARC scratch2 space through HuggingFace.
