@@ -4,7 +4,14 @@ CSCI 566 group project studying how race, gender, and physical characteristics a
 
 ## Dataset Setup (USC CARC)
 
-We use [SocialCounterfactuals](https://huggingface.co/datasets/Intel/SocialCounterfactuals), containing 170,832 images across 13,824 counterfactual groups.
+Go to USC CARC OnDemand and select JupyterLab from the left sidebar. 
+```https://ondemand.carc.usc.edu/pun/sys/dashboard/batch_connect/sessions```
+Fill out the required information to request a CARC allocation. All steps in this README can be completed using CPUs, so a GPU allocation is not necessary. CPU allocations have near-zero queue times.
+
+I recommend requesting a 12-hour allocation and completing the setup in one session, since exporting all the images takes approximately 6 hours.
+Read through the entire README before starting, especially the important note about file paths at the bottom.
+
+Note: You must be connected to USC Wi-Fi (in person or through the VPN) to access CARC.
 
 ### 1. Clone the repository
 
@@ -92,7 +99,7 @@ Use the CSV files inside `exported/` for experiments after image export complete
 **Note:** Large datasets and model weights stay on CARC scratch2, not GitHub. The dataset scripts should be run on a CARC compute node.
 
 
-### Note on file paths
+### IMPORTANT NOTE ON FILE PATHS
 
 `data/inspect_dataset.py` and `data/validate_occupations.py`
 currently have `/scratch2/amishana/` as their default output path.
