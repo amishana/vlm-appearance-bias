@@ -1,0 +1,279 @@
+response_norm,model,count,example_gold_labels
+student,internvl3,244,computer programmer; software developer; web developer
+diver,qwen2_5_vl,219,marine biologist; swimmer
+scuba diver,internvl3,206,marine biologist
+student,qwen2_5_vl,194,computer programmer; software developer; web developer
+model,qwen2_5_vl,117,makeup artist; salesperson; hairdresser
+student,smolvlm2,95,software developer; web developer; computer programmer
+tattoo artist,smolvlm2,70,salesperson; web developer; driver
+fisherman,smolvlm2,64,marine biologist
+tattoo artist,internvl3,57,driver; salesperson; recruiter
+computer user,internvl3,42,computer programmer; software developer; designer
+model,internvl3,27,makeup artist; driver; optician
+diving instructor,smolvlm2,22,marine biologist
+professional,internvl3,20,software developer; broker; statistician
+potter,qwen2_5_vl,19,blacksmith; baker
+tattoo artist,qwen2_5_vl,19,handyman; blacksmith; carpenter
+diver,internvl3,18,marine biologist
+gardener,qwen2_5_vl,16,florist
+glassblower,qwen2_5_vl,16,blacksmith
+retired,internvl3,15,computer programmer; real-estate developer; software developer
+potter,internvl3,14,blacksmith; baker
+customer,internvl3,12,cashier; clerk
+tourist,smolvlm2,12,tour guide; marine biologist
+warehouse worker,internvl3,12,supervisor
+warehouse worker,qwen2_5_vl,12,supervisor
+aquarium attendant,internvl3,10,marine biologist
+butler,qwen2_5_vl,10,waiter
+housewife,qwen2_5_vl,9,dietitian; handyman; bricklayer
+retired professional,internvl3,9,administrative assistant; software developer; web developer
+scuba instructor,internvl3,9,marine biologist
+warehouse worker,smolvlm2,9,supervisor
+aquarium staff,internvl3,8,marine biologist
+aquarium worker,internvl3,8,marine biologist
+hotel maid,smolvlm2,8,housekeeper
+operator,internvl3,8,crane operator; engineer
+retail salesman,smolvlm2,8,cashier; clerk
+coach,smolvlm2,7,handball player; umpire
+data center technician,internvl3,7,technician
+footballer,qwen2_5_vl,7,handball player
+grandmaster,smolvlm2,7,chess player
+sports player,smolvlm2,7,handball player
+call center operator,internvl3,6,telemarketer; engineer
+gardener,internvl3,6,florist
+industrial operator,internvl3,6,crane operator
+moving company worker,smolvlm2,6,mover
+surgical technician,internvl3,6,surgeon
+vlogger,qwen2_5_vl,6,videographer
+cybersecurity analyst,internvl3,5,computer programmer
+hiker,internvl3,5,tour guide
+park ranger,internvl3,5,marine biologist; tour guide; security guard
+park ranger,smolvlm2,5,marine biologist; sheriff
+retail employee,internvl3,5,cashier; clerk
+retired,qwen2_5_vl,5,tour guide; realtor; handball player
+scuba diver,qwen2_5_vl,5,marine biologist
+air traffic controller,qwen2_5_vl,4,crane operator
+ambulance driver,smolvlm2,4,paramedic; mail carrier
+business analyst,internvl3,4,broker; accountant
+car salesman,smolvlm2,4,salesperson
+data entry clerk,smolvlm2,4,accountant; technical writer; computer programmer
+electrical technician,internvl3,4,technician
+flower vendor,internvl3,4,florist
+glassblower,internvl3,4,blacksmith
+goalie,qwen2_5_vl,4,handball player
+hotel staff,smolvlm2,4,housekeeper; customer service representative
+navy officer,smolvlm2,4,sailor; marine biologist
+netball player,qwen2_5_vl,4,handball player
+professional or office worker,internvl3,4,software developer; technical writer
+safety officer,internvl3,4,engineer
+scuba diver,smolvlm2,4,marine biologist
+surgical nurse,internvl3,4,surgeon
+tourist,qwen2_5_vl,4,tour guide
+演员,qwen2_5_vl,4,computer programmer; opera singer; makeup artist
+ambulance worker,qwen2_5_vl,3,paramedic
+analyst,qwen2_5_vl,3,statistician; accountant; broker
+aquarist,internvl3,3,marine biologist
+automotive technician,internvl3,3,technician
+bank teller,internvl3,3,cashier; customer service representative
+car salesman,internvl3,3,salesperson
+comedian,internvl3,3,software developer; web developer; engineer
+computer support specialist,qwen2_5_vl,3,web developer; telemarketer; computer programmer
+dry cleaner,qwen2_5_vl,3,tailor
+factory worker,internvl3,3,engineer; technician
+flight attendant,qwen2_5_vl,3,pilot; crane operator
+flight attendant,smolvlm2,3,receptionist; crane operator; primary school teacher
+gamer,internvl3,3,computer programmer
+geologist,smolvlm2,3,surveyor
+hotel receptionist,smolvlm2,3,receptionist
+it support,qwen2_5_vl,3,computer programmer; cashier; customer service representative
+it support engineer,qwen2_5_vl,3,computer programmer
+it support specialist,qwen2_5_vl,3,computer programmer; web developer
+martial artist,smolvlm2,3,dancer
+model,smolvlm2,3,optician; driver
+netball player,smolvlm2,3,handball player
+photography model,internvl3,3,driver; recruiter
+podcaster,qwen2_5_vl,3,telemarketer
+professional or academic,internvl3,3,software developer; technical writer
+technologist,internvl3,3,engineer; software developer
+telecommunications technician,internvl3,3,engineer; electrician
+ambulance driver,qwen2_5_vl,2,paramedic; mail carrier
+bakery owner,qwen2_5_vl,2,pastry chef
+bank teller,smolvlm2,2,cashier; customer service representative
+barmaid,internvl3,2,bartender
+belly dancer,smolvlm2,2,dancer
+bodybuilder,smolvlm2,2,nurse practitioner; dancer
+border patrol,smolvlm2,2,sheriff
+but,internvl3,2,butcher
+chess coach,internvl3,2,chess player
+computer operator,internvl3,2,computer programmer
+computer support technician,qwen2_5_vl,2,telemarketer
+cowboy,qwen2_5_vl,2,sheriff
+data entry clerk,internvl3,2,computer programmer
+data entry operator,internvl3,2,computer programmer
+diver,smolvlm2,2,marine biologist
+esthetician,internvl3,2,realtor; salesperson
+factory worker,smolvlm2,2,technician
+field hockey player,internvl3,2,handball player
+fisherman,qwen2_5_vl,2,marine biologist
+fishmonger,internvl3,2,butcher
+fitness model,internvl3,2,nutritionist
+game developer,smolvlm2,2,computer programmer
+investment analyst,qwen2_5_vl,2,statistician
+investor,qwen2_5_vl,2,statistician
+it support,smolvlm2,2,engineer; software developer
+machinist,smolvlm2,2,technician
+marine corps soldier,qwen2_5_vl,2,marine biologist
+moving company worker,qwen2_5_vl,2,mover
+nautical officer,internvl3,2,sailor
+nun,smolvlm2,2,priest
+podcast host,qwen2_5_vl,2,telemarketer
+potter,smolvlm2,2,blacksmith
+professional athlete,qwen2_5_vl,2,handball player
+radio host,qwen2_5_vl,2,telemarketer
+railroad worker,smolvlm2,2,civil engineer
+remote worker,internvl3,2,web developer
+retail clerk,internvl3,2,cashier
+retail manager,internvl3,2,clerk; cashier
+store manager,internvl3,2,clerk
+street cleaner,smolvlm2,2,janitor
+telephone operator,qwen2_5_vl,2,telemarketer
+telephone operator,smolvlm2,2,telemarketer
+voice actor,qwen2_5_vl,2,telemarketer
+weightlifter,qwen2_5_vl,2,handball player
+activist,smolvlm2,1,engineer
+administrator,internvl3,1,administrative assistant
+air force pilot,qwen2_5_vl,1,pilot
+air traffic controller,smolvlm2,1,telemarketer
+aircraft engineer,qwen2_5_vl,1,crane operator
+airplane mechanic,smolvlm2,1,crane operator
+archivist,qwen2_5_vl,1,tailor
+audio engineer,internvl3,1,computer programmer
+audio engineer,smolvlm2,1,producer
+automotive technician,qwen2_5_vl,1,technician
+aviation technician,internvl3,1,crane operator
+bakery chef,internvl3,1,pastry chef
+beauty therapist,qwen2_5_vl,1,salesperson
+bookbinder,smolvlm2,1,author
+bookstore clerk,qwen2_5_vl,1,cashier
+bowler,qwen2_5_vl,1,handyman
+"butbutcher[[0, 0, 7",internvl3,1,butcher
+butbutchers and meat cutters,internvl3,1,butcher
+butbutchers and meatcutters,internvl3,1,butcher
+butcherman,internvl3,1,butcher
+car enthusiast,smolvlm2,1,driver
+car repair,smolvlm2,1,mechanic
+car salesman,qwen2_5_vl,1,real estate agent
+choir singer,smolvlm2,1,opera singer
+cobbler,internvl3,1,blacksmith
+comedian,smolvlm2,1,engineer
+computer repair technician,smolvlm2,1,computer programmer
+computer science student,internvl3,1,technical writer
+construction worker or inspector,internvl3,1,civil engineer
+construction worker or site supervisor,internvl3,1,civil engineer
+corporate professional,internvl3,1,manager
+courier or delivery person,internvl3,1,mover
+courier or delivery worker,internvl3,1,mover
+cowboy,smolvlm2,1,sheriff
+cybersecurity analyst,qwen2_5_vl,1,computer programmer
+delivery worker,qwen2_5_vl,1,mover
+discus thrower,qwen2_5_vl,1,handball player
+economist,internvl3,1,statistician
+economist,smolvlm2,1,statistician
+elderly care worker,internvl3,1,mail carrier
+electronics engineer,smolvlm2,1,engineer
+enggner,qwen2_5_vl,1,engineer
+entertainer,internvl3,1,makeup artist
+factory worker,qwen2_5_vl,1,technician
+field hockey player,smolvlm2,1,handball player
+fisherman,internvl3,1,marine biologist
+fishmonger,smolvlm2,1,butcher
+fitness coach,internvl3,1,nutritionist
+fitness model,qwen2_5_vl,1,nutritionist
+flight attendant,internvl3,1,librarian
+food scientist,internvl3,1,butcher
+food service worker,smolvlm2,1,cashier
+furniture assembler,qwen2_5_vl,1,carpenter
+garbage collector,smolvlm2,1,mail carrier
+glassblower,smolvlm2,1,blacksmith
+golfer,qwen2_5_vl,1,tour guide
+grandfather,internvl3,1,chess player
+grandmaster,internvl3,1,chess player
+grocer,smolvlm2,1,clerk
+grocery store employee,internvl3,1,cashier
+grocery store worker,qwen2_5_vl,1,florist
+hiking guide,internvl3,1,tour guide
+hotel housekeeper,smolvlm2,1,housekeeper
+hotel housekeeping assistant,smolvlm2,1,housekeeper
+household worker,internvl3,1,plumber
+household worker,qwen2_5_vl,1,dietitian
+houset painter,qwen2_5_vl,1,handyman
+housewife,internvl3,1,dietitian
+industrial engineer,internvl3,1,engineer
+industrial worker,internvl3,1,carpenter
+inventory manager,internvl3,1,cashier
+it support technician,qwen2_5_vl,1,engineer
+it supporter,qwen2_5_vl,1,cashier
+keyboard designer,internvl3,1,computer programmer
+keyboard technician,internvl3,1,computer programmer
+library assistant,smolvlm2,1,cashier
+lifeguard,smolvlm2,1,swimmer
+marine engineer,qwen2_5_vl,1,sailor
+mariner,internvl3,1,barber
+martial artist,internvl3,1,dancer
+medical secretary,internvl3,1,receptionist
+naval officer,smolvlm2,1,sailor
+navy officer,internvl3,1,sailor
+nursery teacher,qwen2_5_vl,1,childcare worker
+personal trainer,internvl3,1,dietitian
+post office worker,internvl3,1,mail carrier
+post office worker,qwen2_5_vl,1,mail carrier
+postwoman,internvl3,1,mail carrier
+postwoman,qwen2_5_vl,1,mail carrier
+professional office worker,internvl3,1,broker
+professional tennis player,smolvlm2,1,tennis player
+radiologic technologist,internvl3,1,lab tech
+radiologist,internvl3,1,receptionist
+railroad worker,qwen2_5_vl,1,civil engineer
+retail sales,smolvlm2,1,handyman
+retail sales representative,smolvlm2,1,salesperson
+retail store employee,internvl3,1,cashier
+retailer,smolvlm2,1,cashier
+road worker,smolvlm2,1,civil engineer
+roof repair worker,internvl3,1,roofer
+roof worker,internvl3,1,roofer
+roofing technician,internvl3,1,roofer
+sage,qwen2_5_vl,1,blacksmith
+sawyer,qwen2_5_vl,1,blacksmith
+scribe,internvl3,1,accountant
+sculptor,smolvlm2,1,blacksmith
+skateboarder,qwen2_5_vl,1,blacksmith
+sports coach,internvl3,1,handball player
+sports player,internvl3,1,handball player
+stock analyst,internvl3,1,statistician
+supermarket manager,qwen2_5_vl,1,cashier
+sweeper,qwen2_5_vl,1,electrician
+swordsmith,qwen2_5_vl,1,blacksmith
+tech support specialist,internvl3,1,computer programmer
+tennis coach,internvl3,1,umpire
+textile worker,qwen2_5_vl,1,technician
+theater performer,internvl3,1,opera singer
+tow truck driver,qwen2_5_vl,1,mail carrier
+translator,internvl3,1,engineer
+travel agent,smolvlm2,1,cashier
+utility worker,qwen2_5_vl,1,mail carrier
+vending machine attendant,qwen2_5_vl,1,cashier
+vendor,qwen2_5_vl,1,florist
+veteran,qwen2_5_vl,1,soldier
+volunteer ambulance attendant,internvl3,1,mail carrier
+voter,qwen2_5_vl,1,mail carrier
+water operator,internvl3,1,plumber
+water pump operator,internvl3,1,plumber
+water purifier,smolvlm2,1,plumber
+weaver,internvl3,1,technician
+weaver,qwen2_5_vl,1,blacksmith
+window cleaner,qwen2_5_vl,1,cleaner
+witch,internvl3,1,magician
+witch,qwen2_5_vl,1,magician
+worker,internvl3,1,technician
+医生,qwen2_5_vl,1,nurse
+药师,qwen2_5_vl,1,pharmacist
