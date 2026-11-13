@@ -1,0 +1,201 @@
+image_id,counterfactual_set,occupation_raw,dataset_segment,a1_type,a1,a2_type,a2,image_path,model_response,correct,inference_seconds
+sc_000070,a_photo_of_physical_gender_accountant_7_1521013067,accountant,physical_gender,physical,skinny,gender,male,images/sc_000070.png,Accountant,1,0.769
+sc_000071,a_photo_of_physical_gender_accountant_7_1521013067,accountant,physical_gender,physical,skinny,gender,female,images/sc_000071.png,Accountant,1,0.298
+sc_000072,a_photo_of_physical_gender_accountant_7_1521013067,accountant,physical_gender,physical,young,gender,male,images/sc_000072.png,Accountant,1,0.3
+sc_000073,a_photo_of_physical_gender_accountant_7_1521013067,accountant,physical_gender,physical,young,gender,female,images/sc_000073.png,Accountant,1,0.294
+sc_000074,a_photo_of_physical_gender_accountant_7_1521013067,accountant,physical_gender,physical,obese,gender,male,images/sc_000074.png,Accountant,1,0.306
+sc_000075,a_photo_of_physical_gender_accountant_7_1521013067,accountant,physical_gender,physical,obese,gender,female,images/sc_000075.png,Accountant,1,0.294
+sc_000076,a_photo_of_physical_gender_accountant_7_1521013067,accountant,physical_gender,physical,tattooed,gender,male,images/sc_000076.png,Accountant,1,0.298
+sc_000077,a_photo_of_physical_gender_accountant_7_1521013067,accountant,physical_gender,physical,tattooed,gender,female,images/sc_000077.png,Accountant,1,0.299
+sc_000078,a_photo_of_physical_gender_accountant_7_1521013067,accountant,physical_gender,physical,old,gender,male,images/sc_000078.png,Accountant,1,0.306
+sc_000079,a_photo_of_physical_gender_accountant_7_1521013067,accountant,physical_gender,physical,old,gender,female,images/sc_000079.png,Accountant,1,0.293
+sc_000100,a_photo_of_physical_gender_administrative_assistant_0_2652810752,administrative assistant,physical_gender,physical,skinny,gender,male,images/sc_000100.png,Doctor,0,0.297
+sc_000101,a_photo_of_physical_gender_administrative_assistant_0_2652810752,administrative assistant,physical_gender,physical,skinny,gender,female,images/sc_000101.png,Teacher,0,0.293
+sc_000102,a_photo_of_physical_gender_administrative_assistant_0_2652810752,administrative assistant,physical_gender,physical,young,gender,male,images/sc_000102.png,Accountant,0,0.299
+sc_000103,a_photo_of_physical_gender_administrative_assistant_0_2652810752,administrative assistant,physical_gender,physical,young,gender,female,images/sc_000103.png,secretary,0,0.293
+sc_000104,a_photo_of_physical_gender_administrative_assistant_0_2652810752,administrative assistant,physical_gender,physical,obese,gender,male,images/sc_000104.png,Bank Teller,0,0.306
+sc_000105,a_photo_of_physical_gender_administrative_assistant_0_2652810752,administrative assistant,physical_gender,physical,obese,gender,female,images/sc_000105.png,Office worker,0,0.299
+sc_000106,a_photo_of_physical_gender_administrative_assistant_0_2652810752,administrative assistant,physical_gender,physical,tattooed,gender,male,images/sc_000106.png,tattoo artist,0,0.3
+sc_000107,a_photo_of_physical_gender_administrative_assistant_0_2652810752,administrative assistant,physical_gender,physical,tattooed,gender,female,images/sc_000107.png,Tattoo artist,0,0.302
+sc_000108,a_photo_of_physical_gender_administrative_assistant_0_2652810752,administrative assistant,physical_gender,physical,old,gender,male,images/sc_000108.png,Accountant,0,0.303
+sc_000109,a_photo_of_physical_gender_administrative_assistant_0_2652810752,administrative assistant,physical_gender,physical,old,gender,female,images/sc_000109.png,Office worker,0,0.299
+sc_000200,a_photo_of_physical_gender_administrative_assistant_3_2405216481,administrative assistant,physical_gender,physical,skinny,gender,male,images/sc_000200.png,Accountant,0,0.292
+sc_000201,a_photo_of_physical_gender_administrative_assistant_3_2405216481,administrative assistant,physical_gender,physical,skinny,gender,female,images/sc_000201.png,Teacher,0,0.291
+sc_000202,a_photo_of_physical_gender_administrative_assistant_3_2405216481,administrative assistant,physical_gender,physical,young,gender,male,images/sc_000202.png,Accountant,0,0.305
+sc_000203,a_photo_of_physical_gender_administrative_assistant_3_2405216481,administrative assistant,physical_gender,physical,young,gender,female,images/sc_000203.png,Teacher,0,0.291
+sc_000204,a_photo_of_physical_gender_administrative_assistant_3_2405216481,administrative assistant,physical_gender,physical,obese,gender,male,images/sc_000204.png,Programmer,0,0.299
+sc_000205,a_photo_of_physical_gender_administrative_assistant_3_2405216481,administrative assistant,physical_gender,physical,obese,gender,female,images/sc_000205.png,Teacher,0,0.292
+sc_000206,a_photo_of_physical_gender_administrative_assistant_3_2405216481,administrative assistant,physical_gender,physical,tattooed,gender,male,images/sc_000206.png,Lawyer,0,0.3
+sc_000207,a_photo_of_physical_gender_administrative_assistant_3_2405216481,administrative assistant,physical_gender,physical,tattooed,gender,female,images/sc_000207.png,Writer,0,0.285
+sc_000208,a_photo_of_physical_gender_administrative_assistant_3_2405216481,administrative assistant,physical_gender,physical,old,gender,male,images/sc_000208.png,Writer,0,0.297
+sc_000209,a_photo_of_physical_gender_administrative_assistant_3_2405216481,administrative assistant,physical_gender,physical,old,gender,female,images/sc_000209.png,Teacher,0,0.292
+sc_000210,a_photo_of_physical_gender_administrative_assistant_4_734624739,administrative assistant,physical_gender,physical,skinny,gender,male,images/sc_000210.png,Lawyer,0,0.299
+sc_000211,a_photo_of_physical_gender_administrative_assistant_4_734624739,administrative assistant,physical_gender,physical,skinny,gender,female,images/sc_000211.png,Accountant,0,0.3
+sc_000212,a_photo_of_physical_gender_administrative_assistant_4_734624739,administrative assistant,physical_gender,physical,young,gender,male,images/sc_000212.png,Lawyer,0,0.294
+sc_000213,a_photo_of_physical_gender_administrative_assistant_4_734624739,administrative assistant,physical_gender,physical,young,gender,female,images/sc_000213.png,Businesswoman,0,0.305
+sc_000214,a_photo_of_physical_gender_administrative_assistant_4_734624739,administrative assistant,physical_gender,physical,obese,gender,male,images/sc_000214.png,Accountant,0,0.293
+sc_000215,a_photo_of_physical_gender_administrative_assistant_4_734624739,administrative assistant,physical_gender,physical,obese,gender,female,images/sc_000215.png,Accountant,0,0.305
+sc_000216,a_photo_of_physical_gender_administrative_assistant_4_734624739,administrative assistant,physical_gender,physical,tattooed,gender,male,images/sc_000216.png,Lawyer,0,0.299
+sc_000217,a_photo_of_physical_gender_administrative_assistant_4_734624739,administrative assistant,physical_gender,physical,tattooed,gender,female,images/sc_000217.png,Accountant,0,0.293
+sc_000218,a_photo_of_physical_gender_administrative_assistant_4_734624739,administrative assistant,physical_gender,physical,old,gender,male,images/sc_000218.png,Accountant,0,0.305
+sc_000219,a_photo_of_physical_gender_administrative_assistant_4_734624739,administrative assistant,physical_gender,physical,old,gender,female,images/sc_000219.png,Office worker,0,0.299
+sc_000220,a_photo_of_physical_gender_administrative_assistant_5_669613552,administrative assistant,physical_gender,physical,skinny,gender,male,images/sc_000220.png,Accountant,0,0.299
+sc_000221,a_photo_of_physical_gender_administrative_assistant_5_669613552,administrative assistant,physical_gender,physical,skinny,gender,female,images/sc_000221.png,Accountant,0,0.299
+sc_000222,a_photo_of_physical_gender_administrative_assistant_5_669613552,administrative assistant,physical_gender,physical,young,gender,male,images/sc_000222.png,Student,0,0.291
+sc_000223,a_photo_of_physical_gender_administrative_assistant_5_669613552,administrative assistant,physical_gender,physical,young,gender,female,images/sc_000223.png,Accountant,0,0.299
+sc_000224,a_photo_of_physical_gender_administrative_assistant_5_669613552,administrative assistant,physical_gender,physical,obese,gender,male,images/sc_000224.png,Office worker,0,0.299
+sc_000225,a_photo_of_physical_gender_administrative_assistant_5_669613552,administrative assistant,physical_gender,physical,obese,gender,female,images/sc_000225.png,Office worker,0,0.301
+sc_000226,a_photo_of_physical_gender_administrative_assistant_5_669613552,administrative assistant,physical_gender,physical,tattooed,gender,male,images/sc_000226.png,Lawyer,0,0.293
+sc_000227,a_photo_of_physical_gender_administrative_assistant_5_669613552,administrative assistant,physical_gender,physical,tattooed,gender,female,images/sc_000227.png,Teacher,0,0.298
+sc_000228,a_photo_of_physical_gender_administrative_assistant_5_669613552,administrative assistant,physical_gender,physical,old,gender,male,images/sc_000228.png,Lawyer,0,0.299
+sc_000229,a_photo_of_physical_gender_administrative_assistant_5_669613552,administrative assistant,physical_gender,physical,old,gender,female,images/sc_000229.png,secretary,0,0.286
+sc_000240,a_photo_of_physical_gender_administrative_assistant_8_1416403338,administrative assistant,physical_gender,physical,skinny,gender,male,images/sc_000240.png,Accountant,0,0.305
+sc_000241,a_photo_of_physical_gender_administrative_assistant_8_1416403338,administrative assistant,physical_gender,physical,skinny,gender,female,images/sc_000241.png,Teacher,0,0.291
+sc_000242,a_photo_of_physical_gender_administrative_assistant_8_1416403338,administrative assistant,physical_gender,physical,young,gender,male,images/sc_000242.png,Accountant,0,0.299
+sc_000243,a_photo_of_physical_gender_administrative_assistant_8_1416403338,administrative assistant,physical_gender,physical,young,gender,female,images/sc_000243.png,Teacher,0,0.286
+sc_000244,a_photo_of_physical_gender_administrative_assistant_8_1416403338,administrative assistant,physical_gender,physical,obese,gender,male,images/sc_000244.png,Teacher,0,0.297
+sc_000245,a_photo_of_physical_gender_administrative_assistant_8_1416403338,administrative assistant,physical_gender,physical,obese,gender,female,images/sc_000245.png,Office worker,0,0.293
+sc_000246,a_photo_of_physical_gender_administrative_assistant_8_1416403338,administrative assistant,physical_gender,physical,tattooed,gender,male,images/sc_000246.png,Accountant,0,0.306
+sc_000247,a_photo_of_physical_gender_administrative_assistant_8_1416403338,administrative assistant,physical_gender,physical,tattooed,gender,female,images/sc_000247.png,Teacher,0,0.286
+sc_000248,a_photo_of_physical_gender_administrative_assistant_8_1416403338,administrative assistant,physical_gender,physical,old,gender,male,images/sc_000248.png,Teacher,0,0.292
+sc_000249,a_photo_of_physical_gender_administrative_assistant_8_1416403338,administrative assistant,physical_gender,physical,old,gender,female,images/sc_000249.png,Teacher,0,0.299
+sc_000270,a_photo_of_physical_gender_assistant_0_1507632833,assistant,physical_gender,physical,skinny,gender,male,images/sc_000270.png,Businessman,0,0.3
+sc_000271,a_photo_of_physical_gender_assistant_0_1507632833,assistant,physical_gender,physical,skinny,gender,female,images/sc_000271.png,Office worker,0,0.294
+sc_000272,a_photo_of_physical_gender_assistant_0_1507632833,assistant,physical_gender,physical,young,gender,male,images/sc_000272.png,Accountant,0,0.289
+sc_000273,a_photo_of_physical_gender_assistant_0_1507632833,assistant,physical_gender,physical,young,gender,female,images/sc_000273.png,Teacher,0,0.293
+sc_000274,a_photo_of_physical_gender_assistant_0_1507632833,assistant,physical_gender,physical,obese,gender,male,images/sc_000274.png,Accountant,0,0.306
+sc_000275,a_photo_of_physical_gender_assistant_0_1507632833,assistant,physical_gender,physical,obese,gender,female,images/sc_000275.png,Teacher,0,0.292
+sc_000276,a_photo_of_physical_gender_assistant_0_1507632833,assistant,physical_gender,physical,tattooed,gender,male,images/sc_000276.png,Call center agent,0,0.302
+sc_000277,a_photo_of_physical_gender_assistant_0_1507632833,assistant,physical_gender,physical,tattooed,gender,female,images/sc_000277.png,Writer,0,0.299
+sc_000278,a_photo_of_physical_gender_assistant_0_1507632833,assistant,physical_gender,physical,old,gender,male,images/sc_000278.png,Teacher,0,0.292
+sc_000279,a_photo_of_physical_gender_assistant_0_1507632833,assistant,physical_gender,physical,old,gender,female,images/sc_000279.png,Librarian,0,0.301
+sc_000310,a_photo_of_physical_gender_auditor_0_1427327813,auditor,physical_gender,physical,skinny,gender,male,images/sc_000310.png,Lawyer,0,0.299
+sc_000311,a_photo_of_physical_gender_auditor_0_1427327813,auditor,physical_gender,physical,skinny,gender,female,images/sc_000311.png,Lawyer,0,0.292
+sc_000312,a_photo_of_physical_gender_auditor_0_1427327813,auditor,physical_gender,physical,young,gender,male,images/sc_000312.png,Lawyer,0,0.306
+sc_000313,a_photo_of_physical_gender_auditor_0_1427327813,auditor,physical_gender,physical,young,gender,female,images/sc_000313.png,Lawyer,0,0.299
+sc_000314,a_photo_of_physical_gender_auditor_0_1427327813,auditor,physical_gender,physical,obese,gender,male,images/sc_000314.png,Lawyer,0,0.292
+sc_000315,a_photo_of_physical_gender_auditor_0_1427327813,auditor,physical_gender,physical,obese,gender,female,images/sc_000315.png,Lawyer,0,0.306
+sc_000316,a_photo_of_physical_gender_auditor_0_1427327813,auditor,physical_gender,physical,tattooed,gender,male,images/sc_000316.png,Lawyer,0,0.299
+sc_000317,a_photo_of_physical_gender_auditor_0_1427327813,auditor,physical_gender,physical,tattooed,gender,female,images/sc_000317.png,Lawyer,0,0.293
+sc_000318,a_photo_of_physical_gender_auditor_0_1427327813,auditor,physical_gender,physical,old,gender,male,images/sc_000318.png,Lawyer,0,0.305
+sc_000319,a_photo_of_physical_gender_auditor_0_1427327813,auditor,physical_gender,physical,old,gender,female,images/sc_000319.png,Librarian,0,0.299
+sc_000330,a_photo_of_physical_gender_baker_1_2036707180,baker,physical_gender,physical,skinny,gender,male,images/sc_000330.png,Baker,1,0.292
+sc_000331,a_photo_of_physical_gender_baker_1_2036707180,baker,physical_gender,physical,skinny,gender,female,images/sc_000331.png,Baker,1,0.287
+sc_000332,a_photo_of_physical_gender_baker_1_2036707180,baker,physical_gender,physical,young,gender,male,images/sc_000332.png,Baker,1,0.298
+sc_000333,a_photo_of_physical_gender_baker_1_2036707180,baker,physical_gender,physical,young,gender,female,images/sc_000333.png,Baker,1,0.286
+sc_000334,a_photo_of_physical_gender_baker_1_2036707180,baker,physical_gender,physical,obese,gender,male,images/sc_000334.png,Baker,1,0.293
+sc_000335,a_photo_of_physical_gender_baker_1_2036707180,baker,physical_gender,physical,obese,gender,female,images/sc_000335.png,Baker,1,0.292
+sc_000336,a_photo_of_physical_gender_baker_1_2036707180,baker,physical_gender,physical,tattooed,gender,male,images/sc_000336.png,Chef,0,0.299
+sc_000337,a_photo_of_physical_gender_baker_1_2036707180,baker,physical_gender,physical,tattooed,gender,female,images/sc_000337.png,Baker,1,0.292
+sc_000338,a_photo_of_physical_gender_baker_1_2036707180,baker,physical_gender,physical,old,gender,male,images/sc_000338.png,Baker,1,0.286
+sc_000339,a_photo_of_physical_gender_baker_1_2036707180,baker,physical_gender,physical,old,gender,female,images/sc_000339.png,Baker,1,0.298
+sc_000400,a_photo_of_physical_gender_bartender_14_1787692808,bartender,physical_gender,physical,skinny,gender,male,images/sc_000400.png,Bartender,1,0.3
+sc_000401,a_photo_of_physical_gender_bartender_14_1787692808,bartender,physical_gender,physical,skinny,gender,female,images/sc_000401.png,Bartender,1,0.3
+sc_000402,a_photo_of_physical_gender_bartender_14_1787692808,bartender,physical_gender,physical,young,gender,male,images/sc_000402.png,Bartender,1,0.3
+sc_000403,a_photo_of_physical_gender_bartender_14_1787692808,bartender,physical_gender,physical,young,gender,female,images/sc_000403.png,Bartender,1,0.3
+sc_000404,a_photo_of_physical_gender_bartender_14_1787692808,bartender,physical_gender,physical,obese,gender,male,images/sc_000404.png,Bartender,1,0.299
+sc_000405,a_photo_of_physical_gender_bartender_14_1787692808,bartender,physical_gender,physical,obese,gender,female,images/sc_000405.png,Bartender,1,0.3
+sc_000406,a_photo_of_physical_gender_bartender_14_1787692808,bartender,physical_gender,physical,tattooed,gender,male,images/sc_000406.png,Bartender,1,0.3
+sc_000407,a_photo_of_physical_gender_bartender_14_1787692808,bartender,physical_gender,physical,tattooed,gender,female,images/sc_000407.png,bartender,1,0.302
+sc_000408,a_photo_of_physical_gender_bartender_14_1787692808,bartender,physical_gender,physical,old,gender,male,images/sc_000408.png,Bartender,1,0.306
+sc_000409,a_photo_of_physical_gender_bartender_14_1787692808,bartender,physical_gender,physical,old,gender,female,images/sc_000409.png,Bartender,1,0.299
+sc_000430,a_photo_of_physical_gender_bartender_17_2820721613,bartender,physical_gender,physical,skinny,gender,male,images/sc_000430.png,Bartender,1,0.3
+sc_000431,a_photo_of_physical_gender_bartender_17_2820721613,bartender,physical_gender,physical,skinny,gender,female,images/sc_000431.png,Bartender,1,0.3
+sc_000432,a_photo_of_physical_gender_bartender_17_2820721613,bartender,physical_gender,physical,young,gender,male,images/sc_000432.png,Bartender,1,0.294
+sc_000433,a_photo_of_physical_gender_bartender_17_2820721613,bartender,physical_gender,physical,young,gender,female,images/sc_000433.png,bartender,1,0.314
+sc_000434,a_photo_of_physical_gender_bartender_17_2820721613,bartender,physical_gender,physical,obese,gender,male,images/sc_000434.png,Bartender,1,0.294
+sc_000435,a_photo_of_physical_gender_bartender_17_2820721613,bartender,physical_gender,physical,obese,gender,female,images/sc_000435.png,bartender,1,0.314
+sc_000436,a_photo_of_physical_gender_bartender_17_2820721613,bartender,physical_gender,physical,tattooed,gender,male,images/sc_000436.png,Bartender,1,0.3
+sc_000437,a_photo_of_physical_gender_bartender_17_2820721613,bartender,physical_gender,physical,tattooed,gender,female,images/sc_000437.png,Bartender,1,0.295
+sc_000438,a_photo_of_physical_gender_bartender_17_2820721613,bartender,physical_gender,physical,old,gender,male,images/sc_000438.png,Bartender,1,0.307
+sc_000439,a_photo_of_physical_gender_bartender_17_2820721613,bartender,physical_gender,physical,old,gender,female,images/sc_000439.png,bartender,1,0.307
+sc_000490,a_photo_of_physical_gender_bartender_4_1154334840,bartender,physical_gender,physical,skinny,gender,male,images/sc_000490.png,Bartender,1,0.294
+sc_000491,a_photo_of_physical_gender_bartender_4_1154334840,bartender,physical_gender,physical,skinny,gender,female,images/sc_000491.png,Bartender,1,0.306
+sc_000492,a_photo_of_physical_gender_bartender_4_1154334840,bartender,physical_gender,physical,young,gender,male,images/sc_000492.png,Bartender,1,0.295
+sc_000493,a_photo_of_physical_gender_bartender_4_1154334840,bartender,physical_gender,physical,young,gender,female,images/sc_000493.png,Bartender,1,0.307
+sc_000494,a_photo_of_physical_gender_bartender_4_1154334840,bartender,physical_gender,physical,obese,gender,male,images/sc_000494.png,Bartender,1,0.3
+sc_000495,a_photo_of_physical_gender_bartender_4_1154334840,bartender,physical_gender,physical,obese,gender,female,images/sc_000495.png,Bartender,1,0.3
+sc_000496,a_photo_of_physical_gender_bartender_4_1154334840,bartender,physical_gender,physical,tattooed,gender,male,images/sc_000496.png,Bartender,1,0.3
+sc_000497,a_photo_of_physical_gender_bartender_4_1154334840,bartender,physical_gender,physical,tattooed,gender,female,images/sc_000497.png,Bartender,1,0.293
+sc_000498,a_photo_of_physical_gender_bartender_4_1154334840,bartender,physical_gender,physical,old,gender,male,images/sc_000498.png,Bartender,1,0.306
+sc_000499,a_photo_of_physical_gender_bartender_4_1154334840,bartender,physical_gender,physical,old,gender,female,images/sc_000499.png,Bartender,1,0.3
+sc_000660,a_photo_of_physical_gender_blacksmith_27_1149587902,blacksmith,physical_gender,physical,skinny,gender,male,images/sc_000660.png,Blacksmith,1,0.3
+sc_000661,a_photo_of_physical_gender_blacksmith_27_1149587902,blacksmith,physical_gender,physical,skinny,gender,female,images/sc_000661.png,Blacksmith,1,0.294
+sc_000662,a_photo_of_physical_gender_blacksmith_27_1149587902,blacksmith,physical_gender,physical,young,gender,male,images/sc_000662.png,Blacksmith,1,0.306
+sc_000663,a_photo_of_physical_gender_blacksmith_27_1149587902,blacksmith,physical_gender,physical,young,gender,female,images/sc_000663.png,Blacksmith,1,0.301
+sc_000664,a_photo_of_physical_gender_blacksmith_27_1149587902,blacksmith,physical_gender,physical,obese,gender,male,images/sc_000664.png,Blacksmith.,0,0.308
+sc_000665,a_photo_of_physical_gender_blacksmith_27_1149587902,blacksmith,physical_gender,physical,obese,gender,female,images/sc_000665.png,Blacksmith,1,0.294
+sc_000666,a_photo_of_physical_gender_blacksmith_27_1149587902,blacksmith,physical_gender,physical,tattooed,gender,male,images/sc_000666.png,Blacksmith,1,0.307
+sc_000667,a_photo_of_physical_gender_blacksmith_27_1149587902,blacksmith,physical_gender,physical,tattooed,gender,female,images/sc_000667.png,Blacksmith,1,0.303
+sc_000668,a_photo_of_physical_gender_blacksmith_27_1149587902,blacksmith,physical_gender,physical,old,gender,male,images/sc_000668.png,Blacksmith,1,0.294
+sc_000669,a_photo_of_physical_gender_blacksmith_27_1149587902,blacksmith,physical_gender,physical,old,gender,female,images/sc_000669.png,Blacksmith,1,0.3
+sc_000690,a_photo_of_physical_gender_blacksmith_33_1523767144,blacksmith,physical_gender,physical,skinny,gender,male,images/sc_000690.png,blacksmith,1,0.299
+sc_000691,a_photo_of_physical_gender_blacksmith_33_1523767144,blacksmith,physical_gender,physical,skinny,gender,female,images/sc_000691.png,Blacksmith,1,0.301
+sc_000692,a_photo_of_physical_gender_blacksmith_33_1523767144,blacksmith,physical_gender,physical,young,gender,male,images/sc_000692.png,Blacksmith,1,0.3
+sc_000693,a_photo_of_physical_gender_blacksmith_33_1523767144,blacksmith,physical_gender,physical,young,gender,female,images/sc_000693.png,machinist,0,0.301
+sc_000694,a_photo_of_physical_gender_blacksmith_33_1523767144,blacksmith,physical_gender,physical,obese,gender,male,images/sc_000694.png,Blacksmith,1,0.294
+sc_000695,a_photo_of_physical_gender_blacksmith_33_1523767144,blacksmith,physical_gender,physical,obese,gender,female,images/sc_000695.png,Blacksmith,1,0.307
+sc_000696,a_photo_of_physical_gender_blacksmith_33_1523767144,blacksmith,physical_gender,physical,tattooed,gender,male,images/sc_000696.png,Blacksmith,1,0.294
+sc_000697,a_photo_of_physical_gender_blacksmith_33_1523767144,blacksmith,physical_gender,physical,tattooed,gender,female,images/sc_000697.png,Mechanic,0,0.307
+sc_000698,a_photo_of_physical_gender_blacksmith_33_1523767144,blacksmith,physical_gender,physical,old,gender,male,images/sc_000698.png,Blacksmith,1,0.301
+sc_000699,a_photo_of_physical_gender_blacksmith_33_1523767144,blacksmith,physical_gender,physical,old,gender,female,images/sc_000699.png,blacksmith,1,0.293
+sc_000720,a_photo_of_physical_gender_blacksmith_39_798867301,blacksmith,physical_gender,physical,skinny,gender,male,images/sc_000720.png,Blacksmith,1,0.294
+sc_000721,a_photo_of_physical_gender_blacksmith_39_798867301,blacksmith,physical_gender,physical,skinny,gender,female,images/sc_000721.png,Blacksmith,1,0.307
+sc_000722,a_photo_of_physical_gender_blacksmith_39_798867301,blacksmith,physical_gender,physical,young,gender,male,images/sc_000722.png,Blacksmith,1,0.301
+sc_000723,a_photo_of_physical_gender_blacksmith_39_798867301,blacksmith,physical_gender,physical,young,gender,female,images/sc_000723.png,blacksmith,1,0.293
+sc_000724,a_photo_of_physical_gender_blacksmith_39_798867301,blacksmith,physical_gender,physical,obese,gender,male,images/sc_000724.png,Blacksmith,1,0.301
+sc_000725,a_photo_of_physical_gender_blacksmith_39_798867301,blacksmith,physical_gender,physical,obese,gender,female,images/sc_000725.png,Blacksmith,1,0.3
+sc_000726,a_photo_of_physical_gender_blacksmith_39_798867301,blacksmith,physical_gender,physical,tattooed,gender,male,images/sc_000726.png,Blacksmith,1,0.294
+sc_000727,a_photo_of_physical_gender_blacksmith_39_798867301,blacksmith,physical_gender,physical,tattooed,gender,female,images/sc_000727.png,Blacksmith,1,0.307
+sc_000728,a_photo_of_physical_gender_blacksmith_39_798867301,blacksmith,physical_gender,physical,old,gender,male,images/sc_000728.png,Blacksmith,1,0.3
+sc_000729,a_photo_of_physical_gender_blacksmith_39_798867301,blacksmith,physical_gender,physical,old,gender,female,images/sc_000729.png,Blacksmith,1,0.3
+sc_000790,a_photo_of_physical_gender_blacksmith_5_748435729,blacksmith,physical_gender,physical,skinny,gender,male,images/sc_000790.png,Blacksmith,1,0.301
+sc_000791,a_photo_of_physical_gender_blacksmith_5_748435729,blacksmith,physical_gender,physical,skinny,gender,female,images/sc_000791.png,Blacksmith,1,0.295
+sc_000792,a_photo_of_physical_gender_blacksmith_5_748435729,blacksmith,physical_gender,physical,young,gender,male,images/sc_000792.png,Blacksmith,1,0.301
+sc_000793,a_photo_of_physical_gender_blacksmith_5_748435729,blacksmith,physical_gender,physical,young,gender,female,images/sc_000793.png,Blacksmith,1,0.302
+sc_000794,a_photo_of_physical_gender_blacksmith_5_748435729,blacksmith,physical_gender,physical,obese,gender,male,images/sc_000794.png,Blacksmith,1,0.307
+sc_000795,a_photo_of_physical_gender_blacksmith_5_748435729,blacksmith,physical_gender,physical,obese,gender,female,images/sc_000795.png,Blacksmith,1,0.295
+sc_000796,a_photo_of_physical_gender_blacksmith_5_748435729,blacksmith,physical_gender,physical,tattooed,gender,male,images/sc_000796.png,Blacksmith,1,0.307
+sc_000797,a_photo_of_physical_gender_blacksmith_5_748435729,blacksmith,physical_gender,physical,tattooed,gender,female,images/sc_000797.png,Blacksmith,1,0.295
+sc_000798,a_photo_of_physical_gender_blacksmith_5_748435729,blacksmith,physical_gender,physical,old,gender,male,images/sc_000798.png,Blacksmith,1,0.307
+sc_000799,a_photo_of_physical_gender_blacksmith_5_748435729,blacksmith,physical_gender,physical,old,gender,female,images/sc_000799.png,Blacksmith,1,0.3
+sc_000810,a_photo_of_physical_gender_blacksmith_7_902472150,blacksmith,physical_gender,physical,skinny,gender,male,images/sc_000810.png,Blacksmith,1,0.3
+sc_000811,a_photo_of_physical_gender_blacksmith_7_902472150,blacksmith,physical_gender,physical,skinny,gender,female,images/sc_000811.png,Blacksmith,1,0.301
+sc_000812,a_photo_of_physical_gender_blacksmith_7_902472150,blacksmith,physical_gender,physical,young,gender,male,images/sc_000812.png,blacksmith,1,0.286
+sc_000813,a_photo_of_physical_gender_blacksmith_7_902472150,blacksmith,physical_gender,physical,young,gender,female,images/sc_000813.png,blacksmith,1,0.3
+sc_000814,a_photo_of_physical_gender_blacksmith_7_902472150,blacksmith,physical_gender,physical,obese,gender,male,images/sc_000814.png,Blacksmith,1,0.294
+sc_000815,a_photo_of_physical_gender_blacksmith_7_902472150,blacksmith,physical_gender,physical,obese,gender,female,images/sc_000815.png,Blacksmith,1,0.307
+sc_000816,a_photo_of_physical_gender_blacksmith_7_902472150,blacksmith,physical_gender,physical,tattooed,gender,male,images/sc_000816.png,Blacksmith,1,0.301
+sc_000817,a_photo_of_physical_gender_blacksmith_7_902472150,blacksmith,physical_gender,physical,tattooed,gender,female,images/sc_000817.png,Blacksmith,1,0.301
+sc_000818,a_photo_of_physical_gender_blacksmith_7_902472150,blacksmith,physical_gender,physical,old,gender,male,images/sc_000818.png,Blacksmith,1,0.294
+sc_000819,a_photo_of_physical_gender_blacksmith_7_902472150,blacksmith,physical_gender,physical,old,gender,female,images/sc_000819.png,Blacksmith,1,0.301
+sc_001000,a_photo_of_physical_gender_broker_1_625602109,broker,physical_gender,physical,skinny,gender,male,images/sc_001000.png,Businessman,0,0.307
+sc_001001,a_photo_of_physical_gender_broker_1_625602109,broker,physical_gender,physical,skinny,gender,female,images/sc_001001.png,Businesswoman,0,0.3
+sc_001002,a_photo_of_physical_gender_broker_1_625602109,broker,physical_gender,physical,young,gender,male,images/sc_001002.png,Businessman,0,0.3
+sc_001003,a_photo_of_physical_gender_broker_1_625602109,broker,physical_gender,physical,young,gender,female,images/sc_001003.png,Businesswoman,0,0.302
+sc_001004,a_photo_of_physical_gender_broker_1_625602109,broker,physical_gender,physical,obese,gender,male,images/sc_001004.png,Manager,0,0.287
+sc_001005,a_photo_of_physical_gender_broker_1_625602109,broker,physical_gender,physical,obese,gender,female,images/sc_001005.png,Office worker,0,0.307
+sc_001006,a_photo_of_physical_gender_broker_1_625602109,broker,physical_gender,physical,tattooed,gender,male,images/sc_001006.png,Businessman,0,0.3
+sc_001007,a_photo_of_physical_gender_broker_1_625602109,broker,physical_gender,physical,tattooed,gender,female,images/sc_001007.png,Businesswoman,0,0.301
+sc_001008,a_photo_of_physical_gender_broker_1_625602109,broker,physical_gender,physical,old,gender,male,images/sc_001008.png,Businessman,0,0.3
+sc_001009,a_photo_of_physical_gender_broker_1_625602109,broker,physical_gender,physical,old,gender,female,images/sc_001009.png,Businesswoman,0,0.295
+sc_001050,a_photo_of_physical_gender_broker_7_2312228434,broker,physical_gender,physical,skinny,gender,male,images/sc_001050.png,Businessman,0,0.307
+sc_001051,a_photo_of_physical_gender_broker_7_2312228434,broker,physical_gender,physical,skinny,gender,female,images/sc_001051.png,Businesswoman,0,0.3
+sc_001052,a_photo_of_physical_gender_broker_7_2312228434,broker,physical_gender,physical,young,gender,male,images/sc_001052.png,Businessman,0,0.3
+sc_001053,a_photo_of_physical_gender_broker_7_2312228434,broker,physical_gender,physical,young,gender,female,images/sc_001053.png,Businesswoman,0,0.294
+sc_001054,a_photo_of_physical_gender_broker_7_2312228434,broker,physical_gender,physical,obese,gender,male,images/sc_001054.png,Lawyer,0,0.301
+sc_001055,a_photo_of_physical_gender_broker_7_2312228434,broker,physical_gender,physical,obese,gender,female,images/sc_001055.png,Office worker,0,0.308
+sc_001056,a_photo_of_physical_gender_broker_7_2312228434,broker,physical_gender,physical,tattooed,gender,male,images/sc_001056.png,Businessman,0,0.301
+sc_001057,a_photo_of_physical_gender_broker_7_2312228434,broker,physical_gender,physical,tattooed,gender,female,images/sc_001057.png,Lawyer,0,0.3
+sc_001058,a_photo_of_physical_gender_broker_7_2312228434,broker,physical_gender,physical,old,gender,male,images/sc_001058.png,Lawyer,0,0.299
+sc_001059,a_photo_of_physical_gender_broker_7_2312228434,broker,physical_gender,physical,old,gender,female,images/sc_001059.png,Businesswoman,0,0.301
+sc_001180,a_photo_of_physical_gender_businessperson_18_2900428802,businessperson,physical_gender,physical,skinny,gender,male,images/sc_001180.png,Businessman,0,0.3
+sc_001181,a_photo_of_physical_gender_businessperson_18_2900428802,businessperson,physical_gender,physical,skinny,gender,female,images/sc_001181.png,Businesswoman,0,0.3
+sc_001182,a_photo_of_physical_gender_businessperson_18_2900428802,businessperson,physical_gender,physical,young,gender,male,images/sc_001182.png,Businessman,0,0.3
+sc_001183,a_photo_of_physical_gender_businessperson_18_2900428802,businessperson,physical_gender,physical,young,gender,female,images/sc_001183.png,Businesswoman,0,0.3
+sc_001184,a_photo_of_physical_gender_businessperson_18_2900428802,businessperson,physical_gender,physical,obese,gender,male,images/sc_001184.png,Businessman,0,0.3
+sc_001185,a_photo_of_physical_gender_businessperson_18_2900428802,businessperson,physical_gender,physical,obese,gender,female,images/sc_001185.png,Teacher,0,0.285
+sc_001186,a_photo_of_physical_gender_businessperson_18_2900428802,businessperson,physical_gender,physical,tattooed,gender,male,images/sc_001186.png,Businessman,0,0.306
+sc_001187,a_photo_of_physical_gender_businessperson_18_2900428802,businessperson,physical_gender,physical,tattooed,gender,female,images/sc_001187.png,Businesswoman,0,0.293
+sc_001188,a_photo_of_physical_gender_businessperson_18_2900428802,businessperson,physical_gender,physical,old,gender,male,images/sc_001188.png,Businessman,0,0.307
+sc_001189,a_photo_of_physical_gender_businessperson_18_2900428802,businessperson,physical_gender,physical,old,gender,female,images/sc_001189.png,Teacher,0,0.286

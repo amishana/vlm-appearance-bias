@@ -26,3 +26,9 @@ logs/
 
 # System files
 .DS_Store
+
+/home/ds/Documents/vlm-appearance-bias/~/
+~/
+/~/
+/?~/
+\n~/

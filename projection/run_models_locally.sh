@@ -1,0 +1,2 @@
+BACKEND=qwen2_5_vl MODEL=~/Documents/models/Qwen2.5-VL-3B-Instruct bash projection/run_project_local.sh
+BACKEND=smolvlm2   MODEL=~/Documents/models/SmolVLM2-2.2B-Instruct  bash projection/run_project_local.sh
