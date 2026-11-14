@@ -27,9 +27,11 @@ def read_rows(data_dir, split):
 
 
 def sample_by_set(rows, max_images, seed):
-    """Random whole counterfactual sets until ~max_images rows are taken."""
-    if max_images is None or max_images >= len(rows):
-        return rows
+    """Whole counterfactual sets in a seeded random order, until ~max_images
+    rows are taken (all sets if max_images is None).
+
+    The set order depends only on the seed, so a smaller sample is always a
+    prefix of a larger one. `prefix_end` recovers those prefixes."""
     by_set = {}
     for r in rows:
         by_set.setdefault(r["counterfactual_set"], []).append(r)
@@ -37,10 +39,20 @@ def sample_by_set(rows, max_images, seed):
     random.Random(seed).shuffle(sets)
     out = []
     for s in sets:
-        if len(out) >= max_images:
+        if max_images is not None and len(out) >= max_images:
             break
         out.extend(by_set[s])
     return out
+
+
+def prefix_end(set_ids, n):
+    """Number of rows that `sample_by_set(..., max_images=n)` would take from
+    rows already in sample order: the first set boundary at or after n."""
+    set_ids = list(set_ids)
+    for i in range(max(n, 1), len(set_ids)):
+        if set_ids[i] != set_ids[i - 1]:
+            return i
+    return len(set_ids)
 
 
 def image_attrs(row):

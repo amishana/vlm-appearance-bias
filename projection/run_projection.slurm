@@ -30,17 +30,26 @@ DATA=/scratch2/$USER/csci566/processed/socialcounterfactuals/exported
 FEAT=/scratch2/$USER/csci566/features/$BACKEND
 RES=projection/results
 
-# 1. features + statistics (vision path only)
+# 1. features + statistics (vision path only). One 40k pass also saves the
+#    nested 5k / 10k / 20k statistics used for the sample-size check.
 python -m projection.extract_features --backend $BACKEND --model $MODEL --data $DATA \
-    --split train --max-images 20000 --stats --out $FEAT
+    --split train --max-images 40000 --stats --checkpoints 5000 10000 20000 --out $FEAT
 python -m projection.extract_features --backend $BACKEND --model $MODEL --data $DATA \
     --split val --out $FEAT
 
-# 2. erasers: all attributes jointly, plus one per attribute for the ablation
+# 2a. main erasers (20k sample): all attributes jointly, plus one per attribute
 for T in "gender race physical" gender race physical; do
-  python -m projection.fit_eraser --stats $FEAT/train_stats.pt --types $T \
+  python -m projection.fit_eraser --stats $FEAT/train_stats_n20000.pt --types $T \
       --out $FEAT/eraser_$(echo $T | tr ' ' _).pt
 done
+
+# 2b. sample-size check: all-attribute erasers at 5k, 10k, 20k, 40k
+for N in 5000 10000 20000; do
+  python -m projection.fit_eraser --stats $FEAT/train_stats_n$N.pt \
+      --types gender race physical --out $FEAT/eraser_all_n$N.pt
+done
+python -m projection.fit_eraser --stats $FEAT/train_stats.pt \
+    --types gender race physical --out $FEAT/eraser_all_n40000.pt
 
 # 3. sanity check: alpha 0 must equal baseline/results/$BACKEND on these rows
 python -m projection.run_erased --backend $BACKEND --model $MODEL --data $DATA \

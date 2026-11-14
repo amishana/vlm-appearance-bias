@@ -4,10 +4,13 @@ Writes to --out:
     <split>_pooled.npy   [N, d] float32, mean over the image's connector tokens
     <split>_meta.csv     image_id + labels, row-aligned with the .npy
     train_stats.pt       token-level LEACE statistics (only with --stats)
+    train_stats_n<k>.pt  the same statistics on the first ~k images
+                         (one per --checkpoints value; nested samples)
 
 Usage (from the repo root):
     python -m projection.extract_features --backend qwen2_5_vl --model $MODEL \
-        --data $DATA --split train --max-images 20000 --stats --out $FEAT
+        --data $DATA --split train --max-images 40000 --stats \
+        --checkpoints 5000 10000 20000 --out $FEAT
     python -m projection.extract_features --backend qwen2_5_vl --model $MODEL \
         --data $DATA --split val --out $FEAT
 """
@@ -21,7 +24,7 @@ import numpy as np
 import torch
 
 from projection.common import (StopForward, capture_hook, image_attrs,
-                               read_rows, sample_by_set)
+                               prefix_end, read_rows, sample_by_set)
 from projection.leace import StatsAccumulator
 from projection.models import BACKENDS, load_backend
 
@@ -41,9 +44,13 @@ def main():
     p.add_argument("--seed", type=int, default=566)
     p.add_argument("--stats", action="store_true",
                    help="accumulate LEACE statistics (train split only)")
+    p.add_argument("--checkpoints", type=int, nargs="*", default=[],
+                   help="also save statistics after ~this many images (with --stats)")
     args = p.parse_args()
     if args.stats and args.split != "train":
         p.error("--stats is only allowed on the train split")
+    if args.checkpoints and not args.stats:
+        p.error("--checkpoints needs --stats")
     if not torch.cuda.is_available():
         raise RuntimeError("CUDA GPU not available")
 
@@ -55,6 +62,11 @@ def main():
     print(f"hooking {name}", flush=True)
     store = {}
     connector.register_forward_hook(capture_hook(store))
+
+    # checkpoint k is saved at the same set boundary that a run with
+    # --max-images k would stop at, so its sample is identical
+    pending_ckpt = {prefix_end([r["counterfactual_set"] for r in rows], k): k
+                    for k in sorted(args.checkpoints) if k < len(rows)}
 
     pooled, meta, acc = [], [], None
     start = time.perf_counter()
@@ -70,6 +82,10 @@ def main():
             if acc is None:
                 acc = StatsAccumulator(X.shape[1], X.device)
             acc.update(X, image_attrs(row))
+            if i in pending_ckpt:
+                k = pending_ckpt.pop(i)
+                torch.save(acc.state_dict(), args.out / f"train_stats_n{k}.pt")
+                print(f"saved statistics for the first {i:,} images (n{k})", flush=True)
 
         pooled.append(X.float().mean(0).cpu().numpy())
         meta.append({**{k: row[k] for k in META if k in row}, "n_tokens": X.shape[0]})

@@ -24,9 +24,10 @@ sbatch --export=ALL,BACKEND=smolvlm2,MODEL=/path/to/SmolVLM2-2.2B-Instruct  proj
 sbatch --export=ALL,BACKEND=internvl3,MODEL=/path/to/InternVL3-8B           projection/run_projection.slurm
 ```
 
-Each job extracts features and statistics, fits four erasers (all attributes
-plus one per attribute), checks that `--alpha 0` reproduces the baseline, and
-runs the erased model on val.
+Each job extracts features and statistics, fits the four main erasers (all
+attributes plus one per attribute, from a 20k-image sample) and the
+sample-size erasers, checks that `--alpha 0` reproduces the baseline, and runs
+the erased model on val.
 
 CPU steps, after the jobs finish (`pip install scikit-learn` once):
 
@@ -45,6 +46,34 @@ python -m eval.score baseline/results/*/val_predictions.csv \
     projection/results/*_leace_*/val_predictions.csv --out projection/scored
 python -m eval.metrics --scored projection/scored --out projection/eval_results
 ```
+
+## Sample-size check (is 20k enough?)
+
+The Slurm job extracts 40k train images once and saves statistics after the
+first ~5k, 10k and 20k (nested samples: each is a prefix of the next, and
+identical to a separate run with that `--max-images`). It then fits
+`eraser_all_n{5000,10000,20000,40000}.pt`. Afterwards, on CPU:
+
+```bash
+for B in qwen2_5_vl smolvlm2 internvl3; do
+  FEAT=/scratch2/$USER/csci566/features/$B
+  # how similar is each eraser to the 40k one?
+  python -m projection.stability --model-name $B \
+      --erasers $FEAT/eraser_all_n{5000,10000,20000,40000}.pt \
+      --out projection/eval_results/stability.csv
+  # does held-out leakage / occupation decodability change with the eraser's sample?
+  # (probes always trained on all 40k extracted train images, so only the eraser varies)
+  for N in 5000 10000 20000 40000; do
+    python -m projection.probe --features $FEAT --eraser $FEAT/eraser_all_n$N.pt \
+        --alphas 1 --model-name ${B}_n$N --out projection/eval_results/leakage_by_n.csv
+  done
+done
+```
+
+Report it as converged if `subspace_overlap` is near 1 and the probe numbers
+change by less than your threshold (e.g. 0.01 balanced accuracy) from 20k to
+40k. `probe.py --train-max N` restricts probe training to the same nested
+sample, if you also want probes trained on N images.
 
 ## Outputs
 

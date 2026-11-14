@@ -30,7 +30,7 @@ from sklearn.preprocessing import StandardScaler
 
 from eval.occupation_map import EXCLUDED, GOLD_TO_CANONICAL
 from eval.score import normalize as label_normalize
-from projection.common import ATTR_ORDER, AffineEraser
+from projection.common import ATTR_ORDER, AffineEraser, prefix_end
 
 
 def load(features, split):
@@ -72,10 +72,17 @@ def main():
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--no-mlp", action="store_true")
     p.add_argument("--seed", type=int, default=566)
+    p.add_argument("--train-max", type=int, default=None,
+                   help="train probes on the first ~N train images only, the same "
+                        "nested sample as the train_stats_n<N>.pt checkpoint")
     args = p.parse_args()
 
     Xtr0, mtr = load(args.features, "train")
+    if args.train_max is not None:
+        end = prefix_end(mtr["counterfactual_set"], args.train_max)
+        Xtr0, mtr = Xtr0[:end], mtr.iloc[:end].reset_index(drop=True)
     Xva0, mva = load(args.features, "val")
+    print(f"probe train images: {len(mtr):,}", flush=True)
     probes = ["linear"] if args.no_mlp else ["linear", "mlp"]
     rows = []
 
@@ -84,7 +91,8 @@ def main():
         Xtr = er(torch.from_numpy(Xtr0)).numpy()
         Xva = er(torch.from_numpy(Xva0)).numpy()
         base = {"model": args.model_name, "eraser": args.eraser.name,
-                "erased_types": " ".join(er.meta.get("types", [])), "alpha": alpha}
+                "erased_types": " ".join(er.meta.get("types", [])), "alpha": alpha,
+                "train_images": len(mtr)}
 
         diff = np.linalg.norm(Xva - Xva0, axis=1) / np.linalg.norm(Xva0, axis=1)
         cos = (Xva * Xva0).sum(1) / (np.linalg.norm(Xva, axis=1) * np.linalg.norm(Xva0, axis=1))
