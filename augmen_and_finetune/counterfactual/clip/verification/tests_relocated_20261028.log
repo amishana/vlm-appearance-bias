@@ -1,0 +1,8 @@
+.................................                                        [100%]
+=============================== warnings summary ===============================
+tests/test_pipeline.py::test_tiny_clip_vision_lora_updates_and_reload_equivalence
+  <verification-environment>/lib/python3.11/site-packages/peft/utils/save_and_load.py:246: UserWarning: Could not find a config file in  - will assume that the vocabulary was not modified.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+33 passed, 1 warning in 7.96s

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-28",
+  "source_component": "counterfactual-finetuning",
+  "dataset_revision": "182f8d1739028dc3ab9e9f6be4e1cb52cf5d6fe1",
+  "base_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "historical_artifacts_preserved": true,
+  "portable_changes": [
+    "self-contained tests",
+    "shell argv fix",
+    "template config option",
+    "Linux-safe caffeinate",
+    "ten-class CIFAR parsing",
+    "standalone local-image inference"
+  ]
+}

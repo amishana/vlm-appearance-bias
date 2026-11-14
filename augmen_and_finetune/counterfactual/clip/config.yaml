@@ -1,0 +1,31 @@
+experiment:
+  status: TEAM_BENCHMARK_SINGLE_SEED_EXPERIMENT
+data:
+  source: team_exported_csv
+  processed_dir: data/benchmark_processed
+  image_dir: data/benchmark_exported/images
+model:
+  backend: clip
+  name: openai/clip-vit-base-patch32
+  revision: 3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268
+  local_files_only: false
+  prompt_template: A photo of a person working as a {occupation}.
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+training:
+  output_dir: outputs/team_run
+  device: auto
+  seed: 42
+  epochs: 3
+  learning_rate: 0.0001
+  weight_decay: 0.01
+  groups_per_batch: 1
+  max_images_per_group: null
+  consistency_weight: 0.1
+  max_grad_norm: 1.0
+  resume: true
+  checkpoint_steps: 250
+prediction:
+  batch_size: 64

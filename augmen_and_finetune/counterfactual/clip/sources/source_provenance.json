@@ -1,0 +1,30 @@
+{
+  "retrieved_date": "2026-10-23",
+  "sources": [
+    {
+      "file": "socialcounterfactuals_README.md",
+      "url": "https://huggingface.co/datasets/Intel/SocialCounterfactuals/raw/182f8d1739028dc3ab9e9f6be4e1cb52cf5d6fe1/README.md",
+      "sha256": "a6c95287bdce54bebcaa219ade6adc622d86834740fef050ddd3ef4c84f2ad41"
+    },
+    {
+      "file": "clip_model_card.md",
+      "url": "https://huggingface.co/openai/clip-vit-base-patch32/raw/3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268/README.md",
+      "sha256": "8f0e8c678e0afe5f384f3bf8a6694c1cb53c41e52f86277967b6c5354cb0f9f4"
+    },
+    {
+      "file": "project_overview.txt",
+      "source": "User supplied pasted text",
+      "sha256": "9dce0c27900b851c8a17a459b1a31b265a9beb9162409d569da66fe7d69bcf39"
+    },
+    {
+      "file": "Intel_MIT_LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/IntelLabs/multimodal_cognitive_ai/main/LICENSE",
+      "sha256": "eb1b085f5f5e996199950258213d2bdd2c24aebd3170be1458ea4869dfaf59f0"
+    },
+    {
+      "file": "CLIP_MIT_LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/openai/CLIP/main/LICENSE",
+      "sha256": "987e63b32f6c89ff5160e429458a872ff048e6860b590a3912e938f9da8f14db"
+    }
+  ]
+}
