@@ -7,3 +7,7 @@ BACKEND=internvl3  MODEL=YOUR/PATH/TO/models/InternVL3-8B           bash shellsc
 #Projection method
 BACKEND=qwen2_5_vl MODEL=~/Documents/models/Qwen2.5-VL-3B-Instruct bash projection/run_project_local.sh
 BACKEND=smolvlm2   MODEL=~/Documents/models/SmolVLM2-2.2B-Instruct  bash projection/run_project_local.sh
+
+
+#evaluation
+DATA_ROOT=$HOME/Documents/csci566 bash shellscripts/run_eval_local.sh

@@ -1,7 +1,10 @@
-"""Render the baseline evaluation figures with plotly.
+"""Render the evaluation figures with plotly.
 
 Usage:
     python -m eval.plots --results eval/results --out eval/figures
+    # mitigation runs: any model folder names, optionally a subset in a fixed order
+    python -m eval.plots --results projection/eval_results --out projection/eval_figures/qwen2_5_vl \
+        --models qwen2_5_vl_local qwen2_5_vl_leace_all --title "Qwen2.5-VL: baseline vs mitigation"
 
 Each figure is written as interactive HTML and, when kaleido can render, as a
 PNG. ``index.html`` links them all. Model colors are fixed by model name so a
@@ -27,6 +30,37 @@ MODEL_LABELS = {
     "qwen2_5_vl": "Qwen2.5-VL",
     "smolvlm2": "SmolVLM2",
 }
+# Other model names (local baselines, mitigation runs) get these slots in order.
+EXTRA_COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#6250d6", "#c0392b", "#eda100",
+                "#52514e", "#1c5cab"]
+BASE_LABELS = dict(MODEL_LABELS)
+SUFFIX_LABELS = {"_local": " (local baseline)", "_leace_all": " + LEACE (all)",
+                 "_leace_gender": " + LEACE (gender)", "_leace_race": " + LEACE (race)",
+                 "_leace_physical": " + LEACE (physical)", "_cf_lora": " + CF-LoRA",
+                 "_cf_ce_only": " + CE-only LoRA"}
+
+
+def model_label(name):
+    for base, label in BASE_LABELS.items():
+        if name.startswith(base):
+            rest = name[len(base):]
+            return label + SUFFIX_LABELS.get(rest, rest.replace("_", " "))
+    return name
+
+
+def configure_models(models):
+    """Set the plotted models (in order) with their colors and labels. The three
+    baseline models keep their fixed colors when plotted on their own."""
+    fixed = all(m in MODEL_COLORS for m in models)
+    colors = ({m: MODEL_COLORS[m] for m in models} if fixed else
+              {m: EXTRA_COLORS[i % len(EXTRA_COLORS)] for i, m in enumerate(models)})
+    MODEL_COLORS.clear(); MODEL_COLORS.update(colors)
+    MODEL_LABELS.clear(); MODEL_LABELS.update({m: model_label(m) for m in models})
+
+
+def _top(values, pad=1.15, floor=0.02):
+    v = pd.to_numeric(pd.Series(values), errors="coerce").dropna()
+    return max(floor, float(v.max()) * pad) if len(v) else 1.0
 PAIR_COLORS = {"female": "#6250d6", "male": "#eda100"}   # validated pair
 SURFACE = "#fcfcfb"
 INK = "#0b0b0b"
@@ -150,7 +184,8 @@ def fig_attribute_accuracy(acc):
                                "%{customdata[1]:.1%}<br>n = %{customdata[2]:,}"
                                "<extra>" + MODEL_LABELS[model] + "</extra>"),
             ), row=1, col=col)
-    fig.update_yaxes(range=[0.4, 0.7], tickformat=".0%")
+    lo = float(acc["ci_low"].min()); hi = float(acc["ci_high"].max())
+    fig.update_yaxes(range=[max(0.0, lo - 0.05), min(1.0, hi + 0.05)], tickformat=".0%")
     fig.update_yaxes(title="Synonym-tier accuracy", row=1, col=1)
     fig.update_annotations(font={"color": INK, "size": 13})
     return base_layout(fig, "Accuracy by attribute value",
@@ -204,7 +239,7 @@ def fig_consistency(cons):
                           hovertemplate="%{x} distinct: %{y:.1%} of sets (%{customdata[0]:,})<extra>"
                                         + MODEL_LABELS[model] + "</extra>"))
     fig.update_xaxes(title="Distinct predicted occupations within one counterfactual set")
-    fig.update_yaxes(title="Share of sets", tickformat=".0%", range=[0, 0.7])
+    fig.update_yaxes(title="Share of sets", tickformat=".0%", range=[0, min(1.05, _top(cons["share_of_sets"], 1.2))])
     return base_layout(fig, "Counterfactual consistency",
                        "A set holds the same occupation and scene with only two attributes changed. "
                        "A consistent model predicts one occupation per set.", height=440)
@@ -233,7 +268,7 @@ def fig_flip_rates(flips):
                 hovertemplate="%{y}<br>flip rate %{x:.1%} · %{customdata[0]:,} pairs<extra>"
                               + MODEL_LABELS[model] + "</extra>",
             ), row=row, col=1)
-    fig.update_xaxes(range=[0, 0.32], tickformat=".0%", gridcolor=GRID, showgrid=True)
+    fig.update_xaxes(range=[0, _top(flips["flip_rate"])], tickformat=".0%", gridcolor=GRID, showgrid=True)
     fig.update_xaxes(title="Share of matched pairs where the predicted occupation changes", row=3, col=1)
     fig.update_yaxes(showgrid=False, tickfont={"color": INK_2, "size": 11})
     fig.update_annotations(font={"color": INK, "size": 13})
@@ -250,7 +285,7 @@ def fig_occupation_heatmap(oba, k=30):
     col_labels = [v for _, v in cols]
     lim = float(min(0.5, oba[oba["gold_canonical"].isin(occs)]["deviation"].abs().quantile(0.98)))
 
-    fig = make_subplots(rows=1, cols=3, shared_yaxes=True, horizontal_spacing=0.02,
+    fig = make_subplots(rows=1, cols=len(MODEL_COLORS), shared_yaxes=True, horizontal_spacing=0.02,
                         subplot_titles=[MODEL_LABELS[m] for m in MODEL_COLORS])
     for c, model in enumerate(MODEL_COLORS, start=1):
         g = oba[oba["model"] == model]
@@ -269,7 +304,7 @@ def fig_occupation_heatmap(oba, k=30):
         fig.add_trace(go.Heatmap(
             z=z, x=col_labels, y=occs, text=text, zmin=-lim, zmax=lim, zmid=0,
             colorscale=DIVERGING, xgap=2, ygap=2,
-            showscale=(c == 3),
+            showscale=(c == len(MODEL_COLORS)),
             colorbar={"title": "Δ accuracy", "tickformat": "+.0%", "thickness": 12, "len": 0.6},
             hovertemplate="%{y} · %{x}<br>%{text}<extra>" + MODEL_LABELS[model] + "</extra>",
         ), row=1, col=c)
@@ -317,7 +352,7 @@ def fig_stereotype_race(lor):
                .sort_values().index.tolist())
     order = ATTR_ORDER["race"]
     lim = float(min(1.5, g["log_odds_ratio"].abs().quantile(0.98)))
-    fig = make_subplots(rows=1, cols=3, shared_yaxes=True, horizontal_spacing=0.02,
+    fig = make_subplots(rows=1, cols=len(MODEL_COLORS), shared_yaxes=True, horizontal_spacing=0.02,
                         subplot_titles=[MODEL_LABELS[m] for m in MODEL_COLORS])
     for c, model in enumerate(MODEL_COLORS, start=1):
         gm = g[g["model"] == model]
@@ -336,7 +371,7 @@ def fig_stereotype_race(lor):
             z.append(zr); text.append(tr)
         fig.add_trace(go.Heatmap(
             z=z, x=order, y=classes, text=text, zmin=-lim, zmax=lim, zmid=0,
-            colorscale=DIVERGING, xgap=2, ygap=2, showscale=(c == 3),
+            colorscale=DIVERGING, xgap=2, ygap=2, showscale=(c == len(MODEL_COLORS)),
             colorbar={"title": "log-odds", "tickformat": "+.1f", "thickness": 12, "len": 0.6},
             hovertemplate="%{y} · %{x}<br>log-odds %{z:+.2f}<br>%{text}<extra>" + MODEL_LABELS[model] + "</extra>",
         ), row=1, col=c)
@@ -350,7 +385,7 @@ def fig_stereotype_race(lor):
 
 
 def fig_gendered_words(gw):
-    fig = make_subplots(rows=1, cols=3, shared_yaxes=True, horizontal_spacing=0.04,
+    fig = make_subplots(rows=1, cols=len(MODEL_COLORS), shared_yaxes=True, horizontal_spacing=0.04,
                         subplot_titles=[MODEL_LABELS[m] for m in MODEL_COLORS])
     for c, model in enumerate(MODEL_COLORS, start=1):
         g = gw[gw["model"] == model].set_index("subject_gender").reindex(["male", "female"])
@@ -364,7 +399,7 @@ def fig_gendered_words(gw):
                 showlegend=(c == 1),
                 hovertemplate="%{x}: %{y:.2%} of responses<extra>" + f"{word}-marked word" + "</extra>",
             ), row=1, col=c)
-    fig.update_yaxes(tickformat=".0%", range=[0, 0.08])
+    fig.update_yaxes(tickformat=".0%", range=[0, _top(pd.concat([gw["rate_male_word"], gw["rate_female_word"]]), 1.3)])
     fig.update_yaxes(title="Share of responses", row=1, col=1)
     fig.update_annotations(font={"color": INK, "size": 13})
     return base_layout(fig, "Use of gendered occupation words by subject gender",
@@ -385,7 +420,7 @@ def fig_unmapped(un):
             fig.add_trace(bar(model, order, g["unmapped_rate"], showlegend=(col == 1),
                               hovertemplate="%{x}: %{y:.1%} unmapped<extra>" + MODEL_LABELS[model] + "</extra>"),
                           row=1, col=col)
-    fig.update_yaxes(tickformat=".0%", range=[0, 0.08])
+    fig.update_yaxes(tickformat=".0%", range=[0, _top(un["unmapped_rate"], 1.3)])
     fig.update_yaxes(title="Unmapped share of responses", row=1, col=1)
     fig.update_annotations(font={"color": INK, "size": 13})
     return base_layout(fig, "Unmapped responses by attribute value",
@@ -407,7 +442,7 @@ FIGURES = [
 ]
 
 
-def write_index(out_dir, entries):
+def write_index(out_dir, entries, title="Baseline evaluation figures", blurb=None):
     items = "\n".join(
         f'<li><a href="{name}.html">{title}</a>'
         + (f' · <a href="{name}.png">png</a>' if png else "")
@@ -416,17 +451,22 @@ def write_index(out_dir, entries):
     )
     html = f"""<!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Baseline evaluation figures</title>
+<title>{title}</title>
 <style>
 body{{font-family:{FONT};background:{SURFACE};color:{INK};max-width:720px;margin:40px auto;padding:0 16px}}
 h1{{font-size:20px}} li{{margin:8px 0;line-height:1.5}} a{{color:#2a78d6}} .src{{color:{MUTED};font-size:12px}}
 p{{color:{INK_2}}}
 </style></head><body>
-<h1>Baseline evaluation figures</h1>
-<p>Pre-mitigation occupation-prediction results for three VLMs on SocialCounterfactuals (val split).
-Interactive HTML, with the source table from <code>eval/results/</code> named beside each.</p>
+<h1>{title}</h1>
+<p>{blurb}</p>
 <ol>{items}</ol></body></html>"""
     (out_dir / "index.html").write_text(html)
+
+
+def _blurb(models, results):
+    names = ", ".join(MODEL_LABELS[m] for m in models)
+    return (f"Occupation-prediction results on SocialCounterfactuals (val split) for {names}. "
+            f"Interactive HTML, with the source table from <code>{results}/</code> named beside each.")
 
 
 def main(argv=None):
@@ -434,18 +474,31 @@ def main(argv=None):
     parser.add_argument("--results", type=Path, default=Path("eval/results"))
     parser.add_argument("--out", type=Path, default=Path("eval/figures"))
     parser.add_argument("--no-png", action="store_true")
+    parser.add_argument("--models", nargs="+", default=None,
+                        help="model names to plot, in this order (default: all in overall.csv)")
+    parser.add_argument("--title", default=None, help="index page title")
     args = parser.parse_args(argv)
     args.out.mkdir(parents=True, exist_ok=True)
     pio.templates.default = "plotly_white"
 
+    available = pd.read_csv(args.results / "overall.csv")["model"].tolist()
+    models = args.models or available
+    missing = [m for m in models if m not in available]
+    if missing:
+        raise SystemExit(f"not in {args.results / 'overall.csv'}: {missing}")
+    configure_models(models)
+
     entries = []
     for name, title, builder, src in FIGURES:
         frame = pd.read_csv(args.results / src, keep_default_na=False)
+        frame = frame[frame["model"].isin(models)]
         fig = builder(frame)
         png = save(fig, args.out, name, png=not args.no_png)
         entries.append((name, title, png, src))
         print(f"  wrote {name}")
-    write_index(args.out, entries)
+    default_title = ("Baseline evaluation figures" if args.models is None and set(models) <= set(BASE_LABELS)
+                     else "Evaluation figures")
+    write_index(args.out, entries, args.title or default_title, _blurb(models, args.results))
     print(f"index: {args.out / 'index.html'}")
 
 

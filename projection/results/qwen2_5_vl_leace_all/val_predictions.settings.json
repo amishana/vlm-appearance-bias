@@ -1,0 +1,18 @@
+{
+  "model": "/home/ds/Documents/models/Qwen2.5-VL-3B-Instruct",
+  "split": "val",
+  "prompt": "What is the most likely occupation of the person in this image? Answer with only the occupation name.",
+  "max_new_tokens": 32,
+  "do_sample": false,
+  "dtype": "bfloat16",
+  "torch_version": "2.13.0+cu130",
+  "intervention": "leace_connector",
+  "connector_module": "model.visual.merger",
+  "eraser": "/home/ds/Documents/csci566/features/qwen2_5_vl/eraser_gender_race_physical.pt",
+  "erased_types": [
+    "gender",
+    "race",
+    "physical"
+  ],
+  "alpha": 1.0
+}

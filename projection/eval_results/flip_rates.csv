@@ -1,0 +1,257 @@
+model,dataset_segment,attr_type,value_a,value_b,n_pairs,flip_rate
+check_smolvlm2_baseline_local,physical_gender,physical,obese,old,38,0.2631578947368421
+check_smolvlm2_baseline_local,physical_gender,physical,obese,skinny,38,0.34210526315789475
+check_smolvlm2_baseline_local,physical_gender,physical,obese,tattooed,38,0.42105263157894735
+check_smolvlm2_baseline_local,physical_gender,physical,obese,young,38,0.39473684210526316
+check_smolvlm2_baseline_local,physical_gender,physical,old,skinny,38,0.2894736842105263
+check_smolvlm2_baseline_local,physical_gender,physical,old,tattooed,38,0.3684210526315789
+check_smolvlm2_baseline_local,physical_gender,physical,old,young,38,0.2894736842105263
+check_smolvlm2_baseline_local,physical_gender,physical,skinny,tattooed,38,0.23684210526315788
+check_smolvlm2_baseline_local,physical_gender,physical,skinny,young,38,0.13157894736842105
+check_smolvlm2_baseline_local,physical_gender,physical,tattooed,young,38,0.2631578947368421
+qwen2_5_vl_leace_all,physical_gender,physical,obese,old,1528,0.2238219895287958
+qwen2_5_vl_leace_all,physical_gender,physical,obese,skinny,1528,0.2231675392670157
+qwen2_5_vl_leace_all,physical_gender,physical,obese,tattooed,1528,0.2617801047120419
+qwen2_5_vl_leace_all,physical_gender,physical,obese,young,1528,0.21400523560209425
+qwen2_5_vl_leace_all,physical_gender,physical,old,skinny,1528,0.18717277486910994
+qwen2_5_vl_leace_all,physical_gender,physical,old,tattooed,1528,0.2532722513089005
+qwen2_5_vl_leace_all,physical_gender,physical,old,young,1528,0.18651832460732984
+qwen2_5_vl_leace_all,physical_gender,physical,skinny,tattooed,1528,0.2362565445026178
+qwen2_5_vl_leace_all,physical_gender,physical,skinny,young,1528,0.1531413612565445
+qwen2_5_vl_leace_all,physical_gender,physical,tattooed,young,1528,0.23232984293193717
+qwen2_5_vl_local,physical_gender,physical,obese,old,1528,0.2532722513089005
+qwen2_5_vl_local,physical_gender,physical,obese,skinny,1528,0.21924083769633507
+qwen2_5_vl_local,physical_gender,physical,obese,tattooed,1528,0.3010471204188482
+qwen2_5_vl_local,physical_gender,physical,obese,young,1528,0.2218586387434555
+qwen2_5_vl_local,physical_gender,physical,old,skinny,1528,0.2198952879581152
+qwen2_5_vl_local,physical_gender,physical,old,tattooed,1528,0.29908376963350786
+qwen2_5_vl_local,physical_gender,physical,old,young,1528,0.2218586387434555
+qwen2_5_vl_local,physical_gender,physical,skinny,tattooed,1528,0.26767015706806285
+qwen2_5_vl_local,physical_gender,physical,skinny,young,1528,0.15706806282722513
+qwen2_5_vl_local,physical_gender,physical,tattooed,young,1528,0.27028795811518325
+smolvlm2_local,physical_gender,physical,obese,old,1528,0.25589005235602097
+smolvlm2_local,physical_gender,physical,obese,skinny,1528,0.2205497382198953
+smolvlm2_local,physical_gender,physical,obese,tattooed,1528,0.2905759162303665
+smolvlm2_local,physical_gender,physical,obese,young,1528,0.23232984293193717
+smolvlm2_local,physical_gender,physical,old,skinny,1528,0.24018324607329844
+smolvlm2_local,physical_gender,physical,old,tattooed,1528,0.31413612565445026
+smolvlm2_local,physical_gender,physical,old,young,1528,0.24018324607329844
+smolvlm2_local,physical_gender,physical,skinny,tattooed,1528,0.2591623036649215
+smolvlm2_local,physical_gender,physical,skinny,young,1528,0.14659685863874344
+smolvlm2_local,physical_gender,physical,tattooed,young,1528,0.26570680628272253
+check_smolvlm2_baseline_local,physical_gender,gender,female,male,95,0.3157894736842105
+qwen2_5_vl_leace_all,physical_gender,gender,female,male,3820,0.21780104712041884
+qwen2_5_vl_local,physical_gender,gender,female,male,3820,0.2693717277486911
+smolvlm2_local,physical_gender,gender,female,male,3820,0.24554973821989529
+qwen2_5_vl_leace_all,physical_race,physical,obese,old,756,0.17195767195767195
+qwen2_5_vl_leace_all,physical_race,physical,obese,skinny,756,0.1335978835978836
+qwen2_5_vl_leace_all,physical_race,physical,obese,tattooed,756,0.19973544973544974
+qwen2_5_vl_leace_all,physical_race,physical,obese,young,756,0.13624338624338625
+qwen2_5_vl_leace_all,physical_race,physical,old,skinny,756,0.14417989417989419
+qwen2_5_vl_leace_all,physical_race,physical,old,tattooed,756,0.18783068783068782
+qwen2_5_vl_leace_all,physical_race,physical,old,young,756,0.14682539682539683
+qwen2_5_vl_leace_all,physical_race,physical,skinny,tattooed,756,0.1693121693121693
+qwen2_5_vl_leace_all,physical_race,physical,skinny,young,756,0.10185185185185185
+qwen2_5_vl_leace_all,physical_race,physical,tattooed,young,756,0.18253968253968253
+qwen2_5_vl_local,physical_race,physical,obese,old,756,0.15873015873015872
+qwen2_5_vl_local,physical_race,physical,obese,skinny,756,0.12433862433862433
+qwen2_5_vl_local,physical_race,physical,obese,tattooed,756,0.19047619047619047
+qwen2_5_vl_local,physical_race,physical,obese,young,756,0.13227513227513227
+qwen2_5_vl_local,physical_race,physical,old,skinny,756,0.13095238095238096
+qwen2_5_vl_local,physical_race,physical,old,tattooed,756,0.1865079365079365
+qwen2_5_vl_local,physical_race,physical,old,young,756,0.15476190476190477
+qwen2_5_vl_local,physical_race,physical,skinny,tattooed,756,0.167989417989418
+qwen2_5_vl_local,physical_race,physical,skinny,young,756,0.10714285714285714
+qwen2_5_vl_local,physical_race,physical,tattooed,young,756,0.18253968253968253
+smolvlm2_local,physical_race,physical,obese,old,756,0.14947089947089948
+smolvlm2_local,physical_race,physical,obese,skinny,756,0.10582010582010581
+smolvlm2_local,physical_race,physical,obese,tattooed,756,0.16666666666666666
+smolvlm2_local,physical_race,physical,obese,young,756,0.14153439153439154
+smolvlm2_local,physical_race,physical,old,skinny,756,0.13227513227513227
+smolvlm2_local,physical_race,physical,old,tattooed,756,0.17592592592592593
+smolvlm2_local,physical_race,physical,old,young,756,0.14682539682539683
+smolvlm2_local,physical_race,physical,skinny,tattooed,756,0.15343915343915343
+smolvlm2_local,physical_race,physical,skinny,young,756,0.10449735449735449
+smolvlm2_local,physical_race,physical,tattooed,young,756,0.19576719576719576
+qwen2_5_vl_leace_all,physical_race,race,Asian,Black,630,0.1619047619047619
+qwen2_5_vl_leace_all,physical_race,race,Asian,Indian,630,0.1523809523809524
+qwen2_5_vl_leace_all,physical_race,race,Asian,Latino,630,0.11904761904761904
+qwen2_5_vl_leace_all,physical_race,race,Asian,Middle Eastern,630,0.12380952380952381
+qwen2_5_vl_leace_all,physical_race,race,Asian,White,630,0.15079365079365079
+qwen2_5_vl_leace_all,physical_race,race,Black,Indian,630,0.18253968253968253
+qwen2_5_vl_leace_all,physical_race,race,Black,Latino,630,0.13333333333333333
+qwen2_5_vl_leace_all,physical_race,race,Black,Middle Eastern,630,0.13015873015873017
+qwen2_5_vl_leace_all,physical_race,race,Black,White,630,0.1365079365079365
+qwen2_5_vl_leace_all,physical_race,race,Indian,Latino,630,0.16825396825396827
+qwen2_5_vl_leace_all,physical_race,race,Indian,Middle Eastern,630,0.15873015873015872
+qwen2_5_vl_leace_all,physical_race,race,Indian,White,630,0.19206349206349208
+qwen2_5_vl_leace_all,physical_race,race,Latino,Middle Eastern,630,0.11428571428571428
+qwen2_5_vl_leace_all,physical_race,race,Latino,White,630,0.1349206349206349
+qwen2_5_vl_leace_all,physical_race,race,Middle Eastern,White,630,0.1380952380952381
+qwen2_5_vl_local,physical_race,race,Asian,Black,630,0.14444444444444443
+qwen2_5_vl_local,physical_race,race,Asian,Indian,630,0.16825396825396827
+qwen2_5_vl_local,physical_race,race,Asian,Latino,630,0.12380952380952381
+qwen2_5_vl_local,physical_race,race,Asian,Middle Eastern,630,0.12857142857142856
+qwen2_5_vl_local,physical_race,race,Asian,White,630,0.1380952380952381
+qwen2_5_vl_local,physical_race,race,Black,Indian,630,0.14761904761904762
+qwen2_5_vl_local,physical_race,race,Black,Latino,630,0.10476190476190476
+qwen2_5_vl_local,physical_race,race,Black,Middle Eastern,630,0.1253968253968254
+qwen2_5_vl_local,physical_race,race,Black,White,630,0.1349206349206349
+qwen2_5_vl_local,physical_race,race,Indian,Latino,630,0.15873015873015872
+qwen2_5_vl_local,physical_race,race,Indian,Middle Eastern,630,0.16507936507936508
+qwen2_5_vl_local,physical_race,race,Indian,White,630,0.1761904761904762
+qwen2_5_vl_local,physical_race,race,Latino,Middle Eastern,630,0.10952380952380952
+qwen2_5_vl_local,physical_race,race,Latino,White,630,0.12063492063492064
+qwen2_5_vl_local,physical_race,race,Middle Eastern,White,630,0.15079365079365079
+smolvlm2_local,physical_race,race,Asian,Black,630,0.1111111111111111
+smolvlm2_local,physical_race,race,Asian,Indian,630,0.1523809523809524
+smolvlm2_local,physical_race,race,Asian,Latino,630,0.10952380952380952
+smolvlm2_local,physical_race,race,Asian,Middle Eastern,630,0.12698412698412698
+smolvlm2_local,physical_race,race,Asian,White,630,0.1253968253968254
+smolvlm2_local,physical_race,race,Black,Indian,630,0.15396825396825398
+smolvlm2_local,physical_race,race,Black,Latino,630,0.10158730158730159
+smolvlm2_local,physical_race,race,Black,Middle Eastern,630,0.10158730158730159
+smolvlm2_local,physical_race,race,Black,White,630,0.1365079365079365
+smolvlm2_local,physical_race,race,Indian,Latino,630,0.1492063492063492
+smolvlm2_local,physical_race,race,Indian,Middle Eastern,630,0.1349206349206349
+smolvlm2_local,physical_race,race,Indian,White,630,0.15079365079365079
+smolvlm2_local,physical_race,race,Latino,Middle Eastern,630,0.10952380952380952
+smolvlm2_local,physical_race,race,Latino,White,630,0.11428571428571428
+smolvlm2_local,physical_race,race,Middle Eastern,White,630,0.11904761904761904
+qwen2_5_vl_leace_all,race_gender,race,Asian,Black,2390,0.1506276150627615
+qwen2_5_vl_leace_all,race_gender,race,Asian,Indian,2390,0.18744769874476988
+qwen2_5_vl_leace_all,race_gender,race,Asian,Latino,2390,0.1384937238493724
+qwen2_5_vl_leace_all,race_gender,race,Asian,Middle Eastern,2390,0.15606694560669457
+qwen2_5_vl_leace_all,race_gender,race,Asian,White,2390,0.14058577405857742
+qwen2_5_vl_leace_all,race_gender,race,Black,Indian,2390,0.19707112970711296
+qwen2_5_vl_leace_all,race_gender,race,Black,Latino,2390,0.14309623430962343
+qwen2_5_vl_leace_all,race_gender,race,Black,Middle Eastern,2390,0.16108786610878661
+qwen2_5_vl_leace_all,race_gender,race,Black,White,2390,0.14644351464435146
+qwen2_5_vl_leace_all,race_gender,race,Indian,Latino,2390,0.18242677824267783
+qwen2_5_vl_leace_all,race_gender,race,Indian,Middle Eastern,2390,0.17531380753138076
+qwen2_5_vl_leace_all,race_gender,race,Indian,White,2390,0.18702928870292887
+qwen2_5_vl_leace_all,race_gender,race,Latino,Middle Eastern,2390,0.14225941422594143
+qwen2_5_vl_leace_all,race_gender,race,Latino,White,2390,0.13179916317991633
+qwen2_5_vl_leace_all,race_gender,race,Middle Eastern,White,2390,0.14560669456066946
+qwen2_5_vl_local,race_gender,race,Asian,Black,2390,0.16778242677824268
+qwen2_5_vl_local,race_gender,race,Asian,Indian,2390,0.19539748953974895
+qwen2_5_vl_local,race_gender,race,Asian,Latino,2390,0.1497907949790795
+qwen2_5_vl_local,race_gender,race,Asian,Middle Eastern,2390,0.16359832635983262
+qwen2_5_vl_local,race_gender,race,Asian,White,2390,0.15313807531380752
+qwen2_5_vl_local,race_gender,race,Black,Indian,2390,0.21548117154811716
+qwen2_5_vl_local,race_gender,race,Black,Latino,2390,0.15397489539748954
+qwen2_5_vl_local,race_gender,race,Black,Middle Eastern,2390,0.16778242677824268
+qwen2_5_vl_local,race_gender,race,Black,White,2390,0.15690376569037656
+qwen2_5_vl_local,race_gender,race,Indian,Latino,2390,0.20460251046025105
+qwen2_5_vl_local,race_gender,race,Indian,Middle Eastern,2390,0.18619246861924685
+qwen2_5_vl_local,race_gender,race,Indian,White,2390,0.20585774058577405
+qwen2_5_vl_local,race_gender,race,Latino,Middle Eastern,2390,0.14435146443514643
+qwen2_5_vl_local,race_gender,race,Latino,White,2390,0.13598326359832635
+qwen2_5_vl_local,race_gender,race,Middle Eastern,White,2390,0.1514644351464435
+smolvlm2_local,race_gender,race,Asian,Black,2390,0.16778242677824268
+smolvlm2_local,race_gender,race,Asian,Indian,2390,0.19246861924686193
+smolvlm2_local,race_gender,race,Asian,Latino,2390,0.15104602510460252
+smolvlm2_local,race_gender,race,Asian,Middle Eastern,2390,0.16652719665271967
+smolvlm2_local,race_gender,race,Asian,White,2390,0.14476987447698744
+smolvlm2_local,race_gender,race,Black,Indian,2390,0.199163179916318
+smolvlm2_local,race_gender,race,Black,Latino,2390,0.14058577405857742
+smolvlm2_local,race_gender,race,Black,Middle Eastern,2390,0.17364016736401675
+smolvlm2_local,race_gender,race,Black,White,2390,0.15481171548117154
+smolvlm2_local,race_gender,race,Indian,Latino,2390,0.1891213389121339
+smolvlm2_local,race_gender,race,Indian,Middle Eastern,2390,0.17782426778242677
+smolvlm2_local,race_gender,race,Indian,White,2390,0.20460251046025105
+smolvlm2_local,race_gender,race,Latino,Middle Eastern,2390,0.15523012552301255
+smolvlm2_local,race_gender,race,Latino,White,2390,0.13556485355648534
+smolvlm2_local,race_gender,race,Middle Eastern,White,2390,0.16443514644351465
+qwen2_5_vl_leace_all,race_gender,gender,female,male,7170,0.16652719665271967
+qwen2_5_vl_local,race_gender,gender,female,male,7170,0.19609483960948396
+smolvlm2_local,race_gender,gender,female,male,7170,0.2086471408647141
+check_smolvlm2_baseline_local,all,gender,female,male,95,0.3157894736842105
+check_smolvlm2_baseline_local,all,physical,obese,old,38,0.2631578947368421
+check_smolvlm2_baseline_local,all,physical,obese,skinny,38,0.34210526315789475
+check_smolvlm2_baseline_local,all,physical,obese,tattooed,38,0.42105263157894735
+check_smolvlm2_baseline_local,all,physical,obese,young,38,0.39473684210526316
+check_smolvlm2_baseline_local,all,physical,old,skinny,38,0.2894736842105263
+check_smolvlm2_baseline_local,all,physical,old,tattooed,38,0.3684210526315789
+check_smolvlm2_baseline_local,all,physical,old,young,38,0.2894736842105263
+check_smolvlm2_baseline_local,all,physical,skinny,tattooed,38,0.23684210526315788
+check_smolvlm2_baseline_local,all,physical,skinny,young,38,0.13157894736842105
+check_smolvlm2_baseline_local,all,physical,tattooed,young,38,0.2631578947368421
+qwen2_5_vl_leace_all,all,gender,female,male,10990,0.1843494085532302
+qwen2_5_vl_leace_all,all,physical,obese,old,2284,0.20665499124343256
+qwen2_5_vl_leace_all,all,physical,obese,skinny,2284,0.19352014010507881
+qwen2_5_vl_leace_all,all,physical,obese,tattooed,2284,0.24124343257443082
+qwen2_5_vl_leace_all,all,physical,obese,young,2284,0.18826619964973731
+qwen2_5_vl_leace_all,all,physical,old,skinny,2284,0.17294220665499124
+qwen2_5_vl_leace_all,all,physical,old,tattooed,2284,0.23161120840630472
+qwen2_5_vl_leace_all,all,physical,old,young,2284,0.1733800350262697
+qwen2_5_vl_leace_all,all,physical,skinny,tattooed,2284,0.21409807355516638
+qwen2_5_vl_leace_all,all,physical,skinny,young,2284,0.1361646234676007
+qwen2_5_vl_leace_all,all,physical,tattooed,young,2284,0.2158493870402802
+qwen2_5_vl_leace_all,all,race,Asian,Black,3020,0.15298013245033112
+qwen2_5_vl_leace_all,all,race,Asian,Indian,3020,0.18013245033112582
+qwen2_5_vl_leace_all,all,race,Asian,Latino,3020,0.13443708609271524
+qwen2_5_vl_leace_all,all,race,Asian,Middle Eastern,3020,0.14933774834437086
+qwen2_5_vl_leace_all,all,race,Asian,White,3020,0.14271523178807946
+qwen2_5_vl_leace_all,all,race,Black,Indian,3020,0.19403973509933775
+qwen2_5_vl_leace_all,all,race,Black,Latino,3020,0.14105960264900663
+qwen2_5_vl_leace_all,all,race,Black,Middle Eastern,3020,0.15463576158940398
+qwen2_5_vl_leace_all,all,race,Black,White,3020,0.14437086092715232
+qwen2_5_vl_leace_all,all,race,Indian,Latino,3020,0.17947019867549668
+qwen2_5_vl_leace_all,all,race,Indian,Middle Eastern,3020,0.1718543046357616
+qwen2_5_vl_leace_all,all,race,Indian,White,3020,0.1880794701986755
+qwen2_5_vl_leace_all,all,race,Latino,Middle Eastern,3020,0.13642384105960265
+qwen2_5_vl_leace_all,all,race,Latino,White,3020,0.13245033112582782
+qwen2_5_vl_leace_all,all,race,Middle Eastern,White,3020,0.14403973509933773
+qwen2_5_vl_local,all,gender,female,male,10990,0.22156505914467697
+qwen2_5_vl_local,all,physical,obese,old,2284,0.22197898423817863
+qwen2_5_vl_local,all,physical,obese,skinny,2284,0.18782837127845883
+qwen2_5_vl_local,all,physical,obese,tattooed,2284,0.26444833625218916
+qwen2_5_vl_local,all,physical,obese,young,2284,0.19220665499124343
+qwen2_5_vl_local,all,physical,old,skinny,2284,0.1904553415061296
+qwen2_5_vl_local,all,physical,old,tattooed,2284,0.2618213660245184
+qwen2_5_vl_local,all,physical,old,young,2284,0.19964973730297722
+qwen2_5_vl_local,all,physical,skinny,tattooed,2284,0.23467600700525393
+qwen2_5_vl_local,all,physical,skinny,young,2284,0.14054290718038528
+qwen2_5_vl_local,all,physical,tattooed,young,2284,0.24124343257443082
+qwen2_5_vl_local,all,race,Asian,Black,3020,0.1629139072847682
+qwen2_5_vl_local,all,race,Asian,Indian,3020,0.18973509933774835
+qwen2_5_vl_local,all,race,Asian,Latino,3020,0.14437086092715232
+qwen2_5_vl_local,all,race,Asian,Middle Eastern,3020,0.1562913907284768
+qwen2_5_vl_local,all,race,Asian,White,3020,0.15
+qwen2_5_vl_local,all,race,Black,Indian,3020,0.20132450331125828
+qwen2_5_vl_local,all,race,Black,Latino,3020,0.14370860927152318
+qwen2_5_vl_local,all,race,Black,Middle Eastern,3020,0.15894039735099338
+qwen2_5_vl_local,all,race,Black,White,3020,0.152317880794702
+qwen2_5_vl_local,all,race,Indian,Latino,3020,0.19503311258278147
+qwen2_5_vl_local,all,race,Indian,Middle Eastern,3020,0.18178807947019868
+qwen2_5_vl_local,all,race,Indian,White,3020,0.19966887417218543
+qwen2_5_vl_local,all,race,Latino,Middle Eastern,3020,0.13708609271523176
+qwen2_5_vl_local,all,race,Latino,White,3020,0.13278145695364238
+qwen2_5_vl_local,all,race,Middle Eastern,White,3020,0.15132450331125827
+smolvlm2_local,all,gender,female,male,10990,0.22147406733393996
+smolvlm2_local,all,physical,obese,old,2284,0.22066549912434327
+smolvlm2_local,all,physical,obese,skinny,2284,0.18257443082311733
+smolvlm2_local,all,physical,obese,tattooed,2284,0.24956217162872155
+smolvlm2_local,all,physical,obese,young,2284,0.202276707530648
+smolvlm2_local,all,physical,old,skinny,2284,0.2044658493870403
+smolvlm2_local,all,physical,old,tattooed,2284,0.2683887915936953
+smolvlm2_local,all,physical,old,young,2284,0.20928196147110334
+smolvlm2_local,all,physical,skinny,tattooed,2284,0.22416812609457093
+smolvlm2_local,all,physical,skinny,young,2284,0.13266199649737304
+smolvlm2_local,all,physical,tattooed,young,2284,0.2425569176882662
+smolvlm2_local,all,race,Asian,Black,3020,0.15596026490066225
+smolvlm2_local,all,race,Asian,Indian,3020,0.18410596026490067
+smolvlm2_local,all,race,Asian,Latino,3020,0.1423841059602649
+smolvlm2_local,all,race,Asian,Middle Eastern,3020,0.15827814569536425
+smolvlm2_local,all,race,Asian,White,3020,0.14072847682119205
+smolvlm2_local,all,race,Black,Indian,3020,0.18973509933774835
+smolvlm2_local,all,race,Black,Latino,3020,0.13245033112582782
+smolvlm2_local,all,race,Black,Middle Eastern,3020,0.1586092715231788
+smolvlm2_local,all,race,Black,White,3020,0.15099337748344369
+smolvlm2_local,all,race,Indian,Latino,3020,0.18079470198675496
+smolvlm2_local,all,race,Indian,Middle Eastern,3020,0.16887417218543047
+smolvlm2_local,all,race,Indian,White,3020,0.19337748344370861
+smolvlm2_local,all,race,Latino,Middle Eastern,3020,0.1456953642384106
+smolvlm2_local,all,race,Latino,White,3020,0.13112582781456952
+smolvlm2_local,all,race,Middle Eastern,White,3020,0.15496688741721854

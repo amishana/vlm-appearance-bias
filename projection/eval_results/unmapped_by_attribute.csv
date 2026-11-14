@@ -1,0 +1,47 @@
+model,attr_type,attr_value,n,unmapped_rate
+check_smolvlm2_baseline_local,gender,female,95,0.021052631578947368
+check_smolvlm2_baseline_local,gender,male,95,0.031578947368421054
+check_smolvlm2_baseline_local,physical,obese,38,0.02631578947368421
+check_smolvlm2_baseline_local,physical,old,38,0.0
+check_smolvlm2_baseline_local,physical,skinny,38,0.0
+check_smolvlm2_baseline_local,physical,tattooed,38,0.05263157894736842
+check_smolvlm2_baseline_local,physical,young,38,0.05263157894736842
+qwen2_5_vl_leace_all,gender,female,10990,0.022292993630573247
+qwen2_5_vl_leace_all,gender,male,10990,0.023202911737943584
+qwen2_5_vl_leace_all,physical,obese,2284,0.020577933450087564
+qwen2_5_vl_leace_all,physical,old,2284,0.021891418563922942
+qwen2_5_vl_leace_all,physical,skinny,2284,0.020577933450087564
+qwen2_5_vl_leace_all,physical,tattooed,2284,0.02583187390542907
+qwen2_5_vl_leace_all,physical,young,2284,0.027583187390542906
+qwen2_5_vl_leace_all,race,Asian,3020,0.02880794701986755
+qwen2_5_vl_leace_all,race,Black,3020,0.024503311258278145
+qwen2_5_vl_leace_all,race,Indian,3020,0.026490066225165563
+qwen2_5_vl_leace_all,race,Latino,3020,0.0228476821192053
+qwen2_5_vl_leace_all,race,Middle Eastern,3020,0.025827814569536423
+qwen2_5_vl_leace_all,race,White,3020,0.025827814569536423
+qwen2_5_vl_local,gender,female,10990,0.03075523202911738
+qwen2_5_vl_local,gender,male,10990,0.027388535031847135
+qwen2_5_vl_local,physical,obese,2284,0.027583187390542906
+qwen2_5_vl_local,physical,old,2284,0.024956217162872153
+qwen2_5_vl_local,physical,skinny,2284,0.021015761821366025
+qwen2_5_vl_local,physical,tattooed,2284,0.03984238178633975
+qwen2_5_vl_local,physical,young,2284,0.05122591943957969
+qwen2_5_vl_local,race,Asian,3020,0.03245033112582781
+qwen2_5_vl_local,race,Black,3020,0.026158940397350994
+qwen2_5_vl_local,race,Indian,3020,0.03576158940397351
+qwen2_5_vl_local,race,Latino,3020,0.028145695364238412
+qwen2_5_vl_local,race,Middle Eastern,3020,0.03145695364238411
+qwen2_5_vl_local,race,White,3020,0.02847682119205298
+smolvlm2_local,gender,female,10990,0.016287534121929025
+smolvlm2_local,gender,male,10990,0.019472247497725206
+smolvlm2_local,physical,obese,2284,0.010507880910683012
+smolvlm2_local,physical,old,2284,0.0148861646234676
+smolvlm2_local,physical,skinny,2284,0.00788091068301226
+smolvlm2_local,physical,tattooed,2284,0.03896672504378284
+smolvlm2_local,physical,young,2284,0.03371278458844133
+smolvlm2_local,race,Asian,3020,0.018543046357615896
+smolvlm2_local,race,Black,3020,0.011920529801324504
+smolvlm2_local,race,Indian,3020,0.017549668874172187
+smolvlm2_local,race,Latino,3020,0.011258278145695364
+smolvlm2_local,race,Middle Eastern,3020,0.01390728476821192
+smolvlm2_local,race,White,3020,0.013245033112582781

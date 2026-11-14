@@ -27,4 +27,4 @@ logs/
 # System files
 .DS_Store
 
-\n~/
+\n~/counterfactual/clip/.venv/

@@ -1,0 +1,9 @@
+model,eraser,train_images_target,erased_types,reference,rank,subspace_overlap,rel_diff_D
+qwen2_5_vl,eraser_all_n5000.pt,5000,gender race physical,eraser_all_n40000.pt,10,0.987194334441966,0.3865960326487542
+qwen2_5_vl,eraser_all_n10000.pt,10000,gender race physical,eraser_all_n40000.pt,10,0.9939403290757246,0.2713355099932582
+qwen2_5_vl,eraser_all_n20000.pt,20000,gender race physical,eraser_all_n40000.pt,10,0.9981970632451762,0.1615174775991705
+qwen2_5_vl,eraser_all_n40000.pt,40000,gender race physical,eraser_all_n40000.pt,10,1.000000000000001,0.0
+smolvlm2,eraser_all_n5000.pt,5000,gender race physical,eraser_all_n40000.pt,10,0.9612760286962221,0.3779946621395603
+smolvlm2,eraser_all_n10000.pt,10000,gender race physical,eraser_all_n40000.pt,10,0.9810107911522369,0.2606711807911963
+smolvlm2,eraser_all_n20000.pt,20000,gender race physical,eraser_all_n40000.pt,10,0.9934056671197753,0.14976675686698862
+smolvlm2,eraser_all_n40000.pt,40000,gender race physical,eraser_all_n40000.pt,10,0.9999999999999979,0.0

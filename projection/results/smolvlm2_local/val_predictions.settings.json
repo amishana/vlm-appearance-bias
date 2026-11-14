@@ -1,0 +1,9 @@
+{
+  "model": "/home/ds/Documents/models/SmolVLM2-2.2B-Instruct",
+  "split": "val",
+  "prompt": "What is the most likely occupation of the person in this image? Answer with only the occupation name.",
+  "max_new_tokens": 32,
+  "do_sample": false,
+  "dtype": "bfloat16",
+  "torch_version": "2.13.0+cu130"
+}
