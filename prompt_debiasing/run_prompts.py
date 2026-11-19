@@ -12,6 +12,9 @@ Prompt variants
   P4  P1 + P2
 (P3, few-shot, is added later once training-split example images are chosen.)
 
+Backends: smolvlm2, qwen2_5_vl, internvl3 (InternVL3 is loaded exactly as in
+baseline/run_internvl3.py; it needs about 16 GB of GPU memory, so run it on CARC).
+
 Example (from the repo root):
   python prompt_debiasing/run_prompts.py --backend smolvlm2 --prompt P0 \
       --data data_local/sc_sample --split val \
@@ -61,6 +64,7 @@ PROMPTS = {
 DEFAULT_MODELS = {
     "smolvlm2": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
     "qwen2_5_vl": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "internvl3": "OpenGVLab/InternVL3-8B",
 }
 
 # Same output columns as the team baseline, plus the full raw text.
@@ -109,6 +113,81 @@ def build_messages(spec):
     return msgs
 
 
+class HFRunner:
+    """SmolVLM2 and Qwen2.5-VL, loaded like baseline/run_smolvlm2.py and run_qwen2_5_vl.py."""
+
+    def __init__(self, model_id, spec, device, dtype):
+        self.device = device
+        self.max_new_tokens = spec["max_new_tokens"]
+        self.processor = AutoProcessor.from_pretrained(model_id)
+        self.model = AutoModelForImageTextToText.from_pretrained(
+            model_id, dtype=dtype).to(device).eval()
+        self.prompt_text = self.processor.apply_chat_template(
+            build_messages(spec), add_generation_prompt=True, tokenize=False)
+
+    def answer(self, image_path):
+        with Image.open(image_path) as img:
+            image = img.convert("RGB")
+        inputs = self.processor(text=self.prompt_text, images=[image],
+                                return_tensors="pt").to(self.device)
+        with torch.inference_mode():
+            generated = self.model.generate(
+                **inputs, max_new_tokens=self.max_new_tokens, do_sample=False)
+        return self.processor.batch_decode(
+            generated[:, inputs["input_ids"].shape[1]:],
+            skip_special_tokens=True)[0].strip()
+
+
+class InternVLRunner:
+    """InternVL3, loaded exactly like baseline/run_internvl3.py
+    (single 448x448 tile, ImageNet normalization, model.chat)."""
+
+    extra_settings = {
+        "image_size": 448,
+        "image_tiles": 1,
+        "image_preprocessing": "resize_448_imagenet_normalization",
+        "transformers_compatibility_patch": "all_tied_weights_keys",
+    }
+
+    def __init__(self, model_id, spec, device, dtype):
+        from torchvision import transforms as T
+        from torchvision.transforms.functional import InterpolationMode
+        from transformers import AutoConfig, AutoModel, AutoTokenizer
+        from transformers.dynamic_module_utils import get_class_from_dynamic_module
+
+        self.device, self.dtype = device, dtype
+        self.user = spec["user"]
+        self.gen = {"max_new_tokens": spec["max_new_tokens"], "do_sample": False}
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            model_id, trust_remote_code=True, fix_mistral_regex=True)
+        config = AutoConfig.from_pretrained(model_id, trust_remote_code=True)
+        model_class = get_class_from_dynamic_module(
+            config.auto_map["AutoModel"], model_id)
+        if not hasattr(model_class, "all_tied_weights_keys"):
+            model_class.all_tied_weights_keys = {}  # same fix as the baseline
+        self.model = AutoModel.from_pretrained(
+            model_id, trust_remote_code=True, dtype=dtype,
+            low_cpu_mem_usage=True).eval().to(device)
+        if spec["system"]:
+            # P0/P2 keep InternVL's default system message, as in the baseline.
+            self.model.system_message = spec["system"]
+        self.transform = T.Compose([
+            T.Lambda(lambda im: im.convert("RGB")),
+            T.Resize((448, 448), interpolation=InterpolationMode.BICUBIC),
+            T.ToTensor(),
+            T.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
+        ])
+
+    def answer(self, image_path):
+        with Image.open(image_path) as image:
+            pixel_values = self.transform(image).unsqueeze(0)
+        pixel_values = pixel_values.to(device=self.device, dtype=self.dtype)
+        with torch.inference_mode():
+            response = self.model.chat(self.tokenizer, pixel_values,
+                                       "<image>\n" + self.user, self.gen)
+        return response.strip()
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--backend", choices=DEFAULT_MODELS, required=True)
@@ -147,12 +226,8 @@ def main():
     if not pending:
         return
 
-    processor = AutoProcessor.from_pretrained(model_id)
-    model = AutoModelForImageTextToText.from_pretrained(
-        model_id, dtype=dtype).to(device).eval()
-
-    prompt_text = processor.apply_chat_template(
-        build_messages(spec), add_generation_prompt=True, tokenize=False)
+    runner_cls = InternVLRunner if args.backend == "internvl3" else HFRunner
+    runner = runner_cls(model_id, spec, device, dtype)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     settings_path = args.output.with_suffix(".settings.json")
@@ -162,6 +237,7 @@ def main():
         "prompt": spec["user"], "max_new_tokens": spec["max_new_tokens"],
         "do_sample": False, "dtype": args.dtype, "device": device,
         "torch_version": torch.__version__,
+        **getattr(runner_cls, "extra_settings", {}),
     }
     if settings_path.exists() and json.loads(settings_path.read_text()) != settings:
         raise ValueError("Existing output uses different settings; use a new --output")
@@ -175,18 +251,7 @@ def main():
 
         for i, row in enumerate(pending, 1):
             start = time.perf_counter()
-            with Image.open(args.data / row["image_path"]) as img:
-                image = img.convert("RGB")
-
-            inputs = processor(text=prompt_text, images=[image],
-                               return_tensors="pt").to(device)
-            with torch.inference_mode():
-                generated = model.generate(
-                    **inputs, max_new_tokens=spec["max_new_tokens"],
-                    do_sample=False)
-            raw = processor.batch_decode(
-                generated[:, inputs["input_ids"].shape[1]:],
-                skip_special_tokens=True)[0].strip()
+            raw = runner.answer(args.data / row["image_path"])
 
             answer = extract_occupation(raw) if args.prompt in ("P2", "P4") else raw
 
