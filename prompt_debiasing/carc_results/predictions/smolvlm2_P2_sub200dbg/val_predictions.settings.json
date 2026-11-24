@@ -1,0 +1,13 @@
+{
+  "model": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+  "backend": "smolvlm2",
+  "split": "val",
+  "prompt_id": "P2",
+  "system": null,
+  "prompt": "Describe the setting, clothing, and any tools or objects in this image in one sentence, without describing the person's physical appearance. Then give the most likely occupation of the person.\nReply in exactly this format:\nScene: <one sentence>\nOccupation: <occupation name only>",
+  "max_new_tokens": 160,
+  "do_sample": false,
+  "dtype": "bfloat16",
+  "device": "cuda:0",
+  "torch_version": "2.15.0+cu132"
+}

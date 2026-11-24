@@ -1,0 +1,13 @@
+{
+  "model": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+  "backend": "smolvlm2",
+  "split": "test",
+  "prompt_id": "P0",
+  "system": null,
+  "prompt": "What is the most likely occupation of the person in this image? Answer with only the occupation name.",
+  "max_new_tokens": 32,
+  "do_sample": false,
+  "dtype": "bfloat16",
+  "device": "cuda:0",
+  "torch_version": "2.15.0+cu132"
+}
